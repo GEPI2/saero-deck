@@ -326,27 +326,92 @@ svg a text{fill:var(--t1);text-decoration:underline}
 .big2{display:flex;flex-direction:column;gap:4px;padding:16px 22px;border-radius:14px;background:#EEF5F1;margin-top:auto}   /* 두 카드 아래에 맞춰 정렬 */
 .big2 b{font-size:46px;font-weight:900;line-height:1.1;color:var(--accent)!important}
 .big2 span{font-size:21px;color:var(--ink)}
+.big2.msg b{font-size:32px;line-height:1.3;text-wrap:balance}   /* 숫자 대신 문장일 때 */
 #ch-rate .d{font-size:21px;color:var(--muted)}
-/* 12 내가 한다면: 누구에게·어떻게 → 단계별 KPI(무엇·데이터·연결) → KPI 활용(전·중·후) */
-#proposal .how{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:18px 26px}
-#proposal .how p{font-size:22px;font-weight:700;line-height:1.4}
-#proposal .how .k{display:inline-block;font-size:16px;font-weight:800;color:#fff;background:var(--accent);padding:2px 12px;border-radius:999px;margin-right:10px;vertical-align:3px}
-#proposal .how small{display:block;font-size:17px;font-weight:500;color:var(--muted);margin-top:4px}
-#proposal .ktree{display:grid;grid-template-columns:130px repeat(3,1fr);gap:10px 40px;padding:20px 26px}
-#proposal .ktree .hd.to::after{content:"→";position:absolute;right:-33px;top:50%;transform:translateY(-50%);font-size:28px;font-weight:900;color:#C4621C}
-#proposal .ktree .hd{position:relative;font-size:25px;font-weight:900;padding:10px 18px;border-radius:12px;background:#E6F2EC;color:var(--accent);display:flex;align-items:center;justify-content:space-between;gap:8px}
-#proposal .ktree .hd.main{background:var(--accent);color:#fff}
-#proposal .ktree .hd em{font-style:normal;font-size:15px;font-weight:800;padding:2px 10px;border-radius:999px;background:#fff;color:var(--accent)}
-#proposal .ktree .rl{font-size:19px;font-weight:800;color:var(--muted);display:flex;align-items:center}
-#proposal .ktree .c{font-size:24px;font-weight:800;padding:10px 18px;border-radius:12px;background:#F4F8F6;border:1.5px solid #D5E3DA;display:flex;align-items:center}
-#proposal .ktree .c.s{font-size:20px;font-weight:600}
-#proposal .ktree .c.main{background:#DDF3E8;border-color:var(--accent);color:var(--accent)}
-#proposal .use3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-#proposal .use3 .card{display:flex;flex-direction:column;gap:6px;padding:18px 24px}
-#proposal .use3 .w{font-size:17px;font-weight:800;color:var(--accent)}
-#proposal .use3 b{font-size:27px;font-weight:900;color:var(--ink)!important}
-#proposal .use3 span{font-size:20px;color:var(--muted);line-height:1.45;text-wrap:pretty}
-#proposal .take{font-size:28px;font-weight:800;text-align:center;padding:16px 28px}
+/* 13 내가 한다면 ① 에피소드 라벨: 지금(맛마다 1장) → 제안(새 화마다 라벨 교체) · 병 진열 시안 · 흐름 4단계 · 근거 3 */
+#story .now2{display:grid;grid-template-columns:1fr 50px 1fr;align-items:stretch}
+#story .now2 p{display:flex;flex-direction:column;justify-content:center;gap:0;padding:10px 22px;border-radius:16px;font-size:24px;font-weight:800;line-height:1.3}
+#story .now2 .k{font-size:15px;font-weight:800;letter-spacing:.06em;color:var(--muted)}
+#story .now2 small{font-size:17px;font-weight:500;color:var(--muted)}
+#story .was{background:#E9EEEB;color:#55675D}
+#story .was b{color:#55675D!important}
+#story .will{background:#DDF3E8;border:2px solid var(--accent)}
+#story .will .k{color:var(--accent)}
+#story .now2 .ar{font-style:normal;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:#C4621C}
+#story .sgrid{flex:1;min-height:0;display:grid;grid-template-columns:1fr 540px;gap:22px}
+#story .shelf,#story .how2{display:flex;flex-direction:column;gap:12px;padding:18px 24px}
+#story .sh2{font-size:19px;font-weight:800;color:var(--muted)}
+#story .bts2{flex:1;min-height:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:end}
+#story .bt2{display:flex;flex-direction:column;align-items:center;gap:8px}
+#story .bot{width:148px;height:292px;display:flex;flex-direction:column;align-items:center}
+#story .bot .cap{width:40px;height:20px;border-radius:5px 5px 2px 2px;background:#B9C8BF}
+#story .bot .neck{width:40px;height:46px;background:linear-gradient(90deg,#fff,rgba(214,234,224,.8) 50%,#fff);border:2px solid #B4C7BC;border-width:0 2px}
+#story .bot .body{position:relative;flex:1;width:100%;border:2px solid #B4C7BC;border-radius:56px 56px 14px 14px/50px 50px 14px 14px;background:linear-gradient(90deg,#fff,rgba(214,234,224,.65) 50%,#fff)}
+#story .lb{position:absolute;left:9px;right:9px;top:44px;bottom:12px;border-radius:6px;overflow:hidden;box-shadow:0 2px 8px rgba(21,56,45,.2)}
+#story .lb img{width:100%;height:100%;object-fit:cover;display:block}
+#story .lb .wm{position:absolute;left:8px;top:5px;font-size:21px;font-weight:900;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.55)}
+#story .lb .ep{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:flex-end;gap:4px;padding:18px 4px 4px 7px;background:linear-gradient(rgba(4,26,20,0),rgba(4,26,20,.72))}
+#story .lb .ep b{flex:1;font-size:12px;font-weight:800;line-height:1.2;color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,.6);padding-bottom:2px}
+#story .lb .qr{flex:none;width:36px;height:36px;display:block;border-radius:3px}
+#story .bt2 figcaption{font-size:16px;font-weight:700;color:var(--muted);white-space:nowrap}
+#story .bt2 figcaption b{color:#C4621C!important}
+#story .make{display:flex;align-items:center;gap:8px}
+#story .make span{display:flex;align-items:center;gap:8px;font-size:18px;font-weight:800;color:var(--ink);padding:6px 14px 6px 6px;border-radius:999px;background:#EEF5F1}
+#story .make i{font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-size:15px;display:flex;align-items:center;justify-content:center}
+#story .make em{font-style:normal;font-weight:900;color:#C4621C}
+#story .bt2.pick .lb{outline:3px solid #C4621C;outline-offset:2px}
+#story .q1{font-size:19px;line-height:1.4;padding:10px 16px;border-radius:12px;background:#FFF3EA;color:var(--ink)}
+#story .q1 b{color:#C4621C!important}
+#story .how2 ol{flex:1;min-height:0;display:flex;flex-direction:column;gap:8px}
+#story .how2 li{flex:1;display:grid;grid-template-columns:38px 1fr;gap:14px;align-items:center;padding:5px 16px;border-radius:14px;background:#F4F8F6;border:1.5px solid #D5E3DA}
+#story .how2 li.scan{grid-template-columns:38px 1fr 86px}
+#story .how2 .qrbig{width:86px;height:86px;display:block;border-radius:6px}
+#story .how2 li>i{font-style:normal;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center}
+#story .how2 b{display:block;font-size:23px;font-weight:900;color:var(--ink)!important}
+#story .how2 span{font-size:17px;color:var(--muted);line-height:1.3}
+#story .how2 li.main{background:var(--accent);border-color:var(--accent)}
+#story .how2 li.main>i{background:#fff;color:var(--accent)}
+#story .how2 li.main b{color:#fff!important}
+#story .how2 li.main span{color:#D6F0E3}
+#story .why3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+#story .why3 .card{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:18px;padding:14px 24px}
+#story .why3 b{font-size:34px;font-weight:900;line-height:1.1;white-space:nowrap}
+#story .why3 span{font-size:19px;color:var(--muted);line-height:1.4}
+#story .why3 em{font-style:normal;font-weight:800;color:var(--ink)}
+/* 14 내가 한다면 ② 성적표: 10번에서 못 본 연결(관심 → 재구매 → 고정 고객)을 테스트로 직접 잰다 · 일정과 판정 · 지키는 선 */
+#judge .card{background:rgba(4,26,20,.93)}   /* 오른쪽 아래 배경 스카프가 비치지 않게 */
+#judge .chain2{display:grid;grid-template-columns:1fr 96px 1fr 96px 1fr;row-gap:14px;padding:22px 28px}
+#judge .chain2 .q{grid-column:1/-1;font-size:26px;font-weight:800}
+#judge .lk2{display:flex;flex-direction:column;gap:10px;padding:18px 22px;border-radius:16px;background:rgba(169,239,204,.08);border:1px solid var(--line)}
+#judge .lk2 .st{width:fit-content;font-size:16px;font-weight:800;padding:3px 12px;border-radius:999px;border:1px solid var(--mint);color:var(--mint)}
+#judge .lk2 h3{font-size:36px;font-weight:900;margin:0}
+#judge .lk2 ul{display:flex;flex-direction:column;gap:4px}
+#judge .lk2 li{font-size:22px;line-height:1.4;color:var(--pale)}
+#judge .lk2.main{background:var(--mint);border-color:var(--mint);color:#04261A}
+#judge .lk2.main .st{background:#04261A;border-color:#04261A;color:var(--mint)}
+#judge .lk2.main li{color:#21483A}
+#judge .lk2 li.ref{font-size:18px;color:#8FA89B}
+#judge .chain2 .arr{display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:#FFC97A;text-align:center}
+#judge .chain2 .arr::before{content:"→";font-size:44px;line-height:1}
+#judge .row2{display:grid;grid-template-columns:1fr 620px;gap:16px}
+#judge .test{display:flex;flex-direction:column;gap:12px;padding:18px 24px}
+#judge .ph{font-size:21px;font-weight:700;color:var(--pale)}
+#judge .tl{display:flex;gap:6px}
+#judge .tl p{flex:1;display:flex;flex-direction:column;gap:2px;padding:12px 18px;border-radius:10px;background:var(--accent);font-size:21px;font-weight:700;line-height:1.3}
+#judge .tl em{font-style:normal;font-size:15px;font-weight:800;color:#CDEBDD}
+#judge .tl .end{background:rgba(169,239,204,.12)}
+#judge .tl .end em{color:var(--mint)}
+#judge .data{font-size:17px;color:var(--pale)}
+#judge .ghk{display:flex;flex-direction:column;justify-content:center;gap:12px;padding:18px 22px}
+#judge .ghk p{display:grid;grid-template-columns:96px 1fr;align-items:center;gap:12px;font-size:20px;line-height:1.35}
+#judge .ghk em{font-style:normal;font-size:18px;font-weight:900;text-align:center;padding:4px 0;border-radius:8px;color:#04261A}
+#judge .go em{background:var(--mint)}
+#judge .hold em{background:#FFC97A}
+#judge .kill em{background:#FF8E7A}
+#judge .guard2{display:flex;align-items:center;gap:18px;padding:14px 24px}
+#judge .gh{flex:none;display:flex;align-items:center;gap:8px;font-size:20px;font-weight:800;color:#FFB3A6}
+#judge .gl{display:flex;flex-wrap:wrap;gap:8px}
+#judge .gl span{font-size:18px;font-weight:700;padding:4px 12px;border-radius:999px;border:1px solid rgba(255,142,122,.55);color:#FFB3A6}
 /* 목차: 2열 3줄, 누르면 이동 */
 #toc .toc{list-style:none;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:20px}
 #toc .toc a{height:100%;display:grid;grid-template-columns:110px 1fr auto;align-items:center;gap:22px;padding:24px 34px;border-radius:20px;background:rgba(4,26,20,.92);border:1px solid var(--line);text-decoration:none;color:var(--paper);transition:border-color .2s,background .2s}
@@ -404,20 +469,6 @@ svg a text{fill:var(--t1);text-decoration:underline}
 #summary .viz.src3 .own{background:transparent;border:1.5px dashed var(--mint);color:var(--mint)}
 #summary .viz.src3 small{flex-basis:100%}
 #summary .sumline{font-size:32px;font-weight:800;text-align:center;padding:20px 28px;background:rgba(6,34,27,.95)!important;border:1.5px solid var(--mint)!important}
-/* 실행 예시 영상 */
-.proc{display:grid;grid-template-columns:1120px 1fr;gap:26px;align-items:center;flex:1;min-height:0}
-.proc-v{position:relative;aspect-ratio:16/9;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#000}
-.proc-v img,.proc-v video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.proc-v video{opacity:0;transition:opacity .4s}
-.proc-v video.playing{opacity:1}
-.proc-steps{list-style:none;display:flex;flex-direction:column;gap:14px}
-.proc-steps li{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start;padding:20px 22px;border-radius:18px;background:rgba(4,26,20,.93);border:1px solid var(--line);cursor:pointer;transition:border-color .3s,background .3s}
-.proc-steps li:not(.now) .pn,.proc-steps li:not(.now) b{color:#6E8C80!important}
-.proc-steps li:not(.now) div span{color:#5C776C}
-.proc-steps li.now{opacity:1;border-color:var(--mint);background:rgba(8,46,36,.95)}
-.proc-steps .pn{font-size:34px;font-weight:900;color:var(--mint);line-height:1}
-.proc-steps b{display:block;font-size:26px;font-weight:800;line-height:1.3}
-.proc-steps div span{display:block;font-size:18px;color:var(--pale);margin-top:6px;line-height:1.45}
 /* 9 타겟팅과 인사이트: 관심(공개) → 고정 고객 → 매출(회사 안) */
 #insight .chain{display:grid;grid-template-columns:1fr 100px 1fr 100px 1fr;align-items:stretch;row-gap:18px;padding:28px 30px}
 #insight .chain .q{grid-column:1/-1;font-size:27px;font-weight:800}
@@ -511,7 +562,7 @@ svg a text{fill:var(--t1);text-decoration:underline}
       <li><a href="#7" onclick="go(6);return false"><span class="num">03</span><span class="tt"><b>공개된 성과</b><small>알리고 관심 끌기 · 캐릭터와 친해지기</small></span><span class="pg">7–8</span></a></li>
       <li><a href="#9" onclick="go(8);return false"><span class="num">04</span><span class="tt"><b>보이지 않는 연결</b><small>판매량 속 고객 · 공개된 숫자와 공개되지 않은 숫자</small></span><span class="pg">9</span></a></li>
       <li><a href="#10" onclick="go(9);return false"><span class="num">05</span><span class="tt"><b>타겟팅과 인사이트</b><small>누구를 노렸고, 무엇을 보고 싶었나</small></span><span class="pg">10</span></a></li>
-      <li><a href="#11" onclick="go(10);return false"><span class="num">06</span><span class="tt"><b>비판과 내가 한다면</b><small>조회수의 한계 · 정리 · 단계마다 KPI로 재기</small></span><span class="pg">11–14</span></a></li>
+      <li><a href="#11" onclick="go(10);return false"><span class="num">06</span><span class="tt"><b>비판과 내가 한다면</b><small>조회수의 한계 · 정리 · 에피소드 라벨</small></span><span class="pg">11–14</span></a></li>
     </ol>
     <p class="toc-ap"><a href="#15" onclick="go(14);return false">부록 · 출처와 데이터 노트<span class="pg">15</span></a></p>
   </section>
@@ -646,9 +697,9 @@ svg a text{fill:var(--t1);text-decoration:underline}
       </div>
     </div>
     <div class="card pace">
-      <div><p class="t">해마다 2억 병대에서 오르내린다</p><p class="d">누적 병수를 연도별로 나눈 발표자 추정 · 달성 시점 사이는 고르게 팔렸다고 가정</p></div>
+      <div><p class="t">해마다 2억 병</p><p class="d">누적 병수를 연도별로 나눈 발표자 추정 · 달성 시점 사이는 고르게 팔렸다고 가정</p></div>
       <div id="ch-pace"></div>
-      <p class="pace-c">연 <b>2.2~2.9억 병</b>(추정), <b>뚜렷한 증가 추세는 없음</b><small>판매량 기준이라 새로 산 사람과 다시 산 사람은 구분할 수 없음</small></p>
+      <p class="pace-c">연 <b>2.2~2.9억 병</b>(추정),<br><b>뚜렷한 증가 추세는 없음</b></p>
     </div>
   </section>
 
@@ -708,7 +759,7 @@ svg a text{fill:var(--t1);text-decoration:underline}
           <li><b>새로 음용자 조사</b><span>했다고는 밝혔지만 결과는 비공개</span></li>
           <li><b>새로 매출</b><span>2024년 2분기부터 IR에서 따로 표기 안 함</span></li>
         </ul>
-        <p class="pgc">고정 고객을 잴 재료는 있지만, 결과는 공개되지 않았다</p>
+        <p class="pgc">고정 고객을 분석할 수치는 있지만, 결과는 공개되지 않았다</p>
       </div>
     </div>
     <p class="src">출처: 롯데칠성음료 보도자료 1292·1550·1593·1654 · IR 실적 자료 · 사업보고서 2025(DART) · 엠브레인 구매딥데이터 서비스 소개 · 고객 흐름 비율은 설명용 예시</p>
@@ -721,14 +772,14 @@ svg a text{fill:var(--t1);text-decoration:underline}
     <div class="aim3">
       <div class="card"><svg class="ic"><use href="#i-users"/></svg><div><p class="k">누구를</p><p class="v">20·30대 주 소비층<span class="vs">여성 선호 ↑ → 남성 캐릭터 목소리 이도현</span></p></div></div>
       <div class="card"><svg class="ic"><use href="#i-screen"/></svg><div><p class="k">어디서 · 수업의 네 축</p><p class="v">콘텐츠·소셜 축<span class="vs">유튜브 · 인스타 · 팝업</span></p></div></div>
-      <div class="card"><svg class="ic"><use href="#i-stairs"/></svg><div><p class="k">어느 단계 · 퍼널</p><p class="v">위쪽: 인지 · 관심<span class="vs">처음 목적 ‘재미있게 전달’ · 5A A1~A3, 일부 A5</span></p></div></div>
+      <div class="card"><svg class="ic"><use href="#i-stairs"/></svg><div><p class="k">어느 단계 · 퍼널</p><p class="v">인지 · 관심<span class="vs">처음 목적 ‘재미있게 전달’ · 5A A1~A3, 일부 A5</span></p></div></div>
     </div>
     <div class="card chain">
       <p class="q">내가 보고 싶었던 것: 관심이 고정 고객과 매출로 이어졌는가</p>
       <div class="lk open"><span class="st"><svg class="ic"><use href="#i-check"/></svg>공개됨</span><h3>인지 · 관심 · 구매</h3>
         <ul><li>유튜브 43편 8,600만 회 (2025.8까지)</li><li>새로도원 4만 명+</li><li>출품자료: 인지도·구매고려도 상승</li><li>누적 8억 병 (처음 산·다시 산 구분 없음)</li></ul></div>
       <p class="arr">이어졌나?</p>
-      <div class="lk shut"><span class="st"><svg class="ic"><use href="#i-lock"/></svg>공개 안 됨</span><h3>다시 삼 · 고정 고객</h3>
+      <div class="lk shut"><span class="st"><svg class="ic"><use href="#i-lock"/></svg>공개 안 됨</span><h3>재구매 · 고정 고객</h3>
         <ul><li>재구매율 · 고정 고객 수</li><li>출품자료 KPI ‘충성도’의 결과 없음</li></ul></div>
       <p class="arr">이어졌나?</p>
       <div class="lk shut"><span class="st"><svg class="ic"><use href="#i-lock"/></svg>회사 안 · 비공개</span><h3>매출</h3>
@@ -747,11 +798,11 @@ svg a text{fill:var(--t1);text-decoration:underline}
     <div class="crit2">
       <div class="card crow2"><p class="h"><span class="n">1</span>조회수에 비해 구독자·팔로워가 적다</p>
         <div class="caps"><figure><img src="images/08_youtube_channel.png" alt="롯데칠성 주류 유튜브 채널, 구독자 4.14만명"><figcaption>유튜브 롯데칠성 주류 · 2026.10.1 캡처</figcaption></figure><figure><img src="images/08_instagram_profile.png" alt="새로구미 인스타그램, 팔로워 2.2만"><figcaption>인스타 @saero9mi · 2026.10.1 캡처</figcaption></figure></div>
-        <p class="big2"><b>약 3,400분의 1</b><span>영상 42편 조회 1억 4천만 회+ (2026.9.30 직접 집계) → 구독 4.14만 · 팔로워 2.2만</span></p>
+        <p class="big2"><b>약 0.03%</b><span>구독자 ÷ 조회수 · 구독 4.14만 ÷ 영상 42편 조회 1억 4천만 회+ (2026.9.30 직접 집계)</span></p>
       </div>
       <div class="card crow2"><p class="h"><span class="n">2</span>조회수로는 광고 노출과 자발적 관심을 가를 수 없다</p>
         <div id="ch-rate"></div>
-        <p class="big2"><b>300배 넘는 차이</b><span>15초 광고는 1,334만 회 조회에 좋아요 220개 · 본편은 0.54%</span></p>
+        <p class="big2 msg"><b>단순 영상 광고로는 관심·구매 단계로 전환이 쉽지 않다</b><span>15초 광고 좋아요 비율 0.0016% · 본편 0.54% (300배 넘는 차이)</span></p>
       </div>
     </div>
     <p class="src">출처: 유튜브 직접 확인(2026.9.30~10.1, <a href="https://www.youtube.com/@lotteLiquorBG/videos" target="_blank">롯데칠성 주류</a> · <a href="https://www.instagram.com/saero9mi/" target="_blank">@saero9mi</a>) · 3주차 강의(삼성카드 사례)</p>
@@ -770,13 +821,13 @@ svg a text{fill:var(--t1);text-decoration:underline}
       </div>
       <div class="card sq t-warn">
         <p class="sh"><span class="tag"><svg class="ic"><use href="#i-half"/></svg>노출 지표</span>유튜브 숫자는 믿을 수 있을까?</p>
-        <div class="viz bars"><p><span>본편 새로 살구</span><i style="width:100%"></i><b>0.54%</b></p><p><span>15초 광고</span><i style="width:2%"></i><b>0.0017%</b></p><small>좋아요 ÷ 조회수</small></div>
+        <div class="viz bars"><p><span>본편 새로 살구</span><i style="width:100%"></i><b>0.54%</b></p><p><span>15초 광고</span><i style="width:2%"></i><b>0.0016%</b></p><small>좋아요 ÷ 조회수</small></div>
         <p class="a">많이 보여 준 숫자이지, 좋아한 숫자는 아니다</p>
         <p class="e">광고 예산의 80%가 조회형 광고 (출품자료)</p>
       </div>
       <div class="card sq t-bad">
         <p class="sh"><span class="tag"><svg class="ic"><use href="#i-x"/></svg>끊김</span>왜 구독·팔로우로 이어지지 않았나?</p>
-        <div class="viz big"><b>3,400분의 1</b><span>조회 1억 4천만 회 → 구독 4.14만 · 팔로워 2.2만</span></div>
+        <div class="viz big"><b>약 0.03%</b><span>구독자 ÷ 조회수 · 구독 4.14만 ÷ 조회 1억 4천만 회+</span></div>
         <p class="a">광고로 본 사람을 다시 만날 통로가 없었다</p>
       </div>
       <div class="card sq t-lock">
@@ -801,41 +852,77 @@ svg a text{fill:var(--t1);text-decoration:underline}
     <p class="sumline card">목표가 고정 고객이라면, 성적표도 <b>고정 고객</b>으로 매겨야 한다</p>
   </section>
 
-  <!-- 13 내가 한다면: 9번에서 볼 수 없던 연결(관심 → 고정 고객 → 매출)을 단계마다 KPI로 재고, 그 KPI를 캠페인 전·중·후에 쓴다 -->
-  <section class="light" data-bg="light" id="proposal">
-    <p class="eyebrow">내가 한다면 · 같은 목표: 고정 고객 (회사가 적은 로열티)</p>
-    <h2>관심이 고정 고객·매출로 이어지는지, 단계마다 KPI로 잰다</h2>
-    <div class="card how">
-      <p><span class="k">누구에게</span>최근 90일 안에 새로를 산 20·30대 성인 멤버십 회원<small>이미 산 사람에서 출발 · 편의점·마트 L.POINT 적립 기록 · 광고 수신 동의 회원만</small></p>
-      <p><span class="k">어떻게</span>무작위로 절반 나눠 A에만 새로구미 ‘다음 이야기’를 보낸다<small>멤버십 앱 · 롯데멤버스가 보내고 롯데칠성은 집단별 결과만 받음 · 퍼널: 다시 삼 · 네 축: 오운드·CRM(유통사 멤버십을 빌림)</small></p>
+  <!-- 13 내가 한다면 ① 에피소드 라벨: 맛마다 1장으로 고정된 라벨을, 애니메이션 새 화가 나올 때마다 그 화의 장면으로 바꾼다 (보상·무작위 없음) -->
+  <section class="light" data-bg="light" id="story">
+    <p class="eyebrow">내가 한다면 ① 에피소드 라벨</p>
+    <h2>새로구미 이야기를, 병에 연재한다면?</h2>
+    <div class="now2">
+      <p class="was"><span class="k">지금</span><span>맛마다 라벨 <b>1장</b>, 바뀌는 건 리뉴얼 때뿐</span><small>국내 판매 기준 오리지널·살구·다래·오미자 · 예외는 2025.11 아홉 꼬리 한정판</small></p>
+      <i class="ar">→</i>
+      <p class="will"><span class="k">제안</span><span>새 화의 <b>명장면을 일러스트 라벨로</b></span><small>QR을 찍으면 그 장면부터 재생 · 병이 사는 사람 모두에게 닿는 ‘연재 지면’</small></p>
     </div>
-    <div class="card ktree">
-      <span></span><p class="hd to">관심 · 이야기 열람</p><p class="hd main to">다시 삼 · 고정 고객<em>핵심 KPI</em></p><p class="hd">매출</p>
-      <p class="rl">KPI</p><p class="c">이야기 열람률</p><p class="c main">90일 재구매율</p><p class="c">1인당 새로 구매액</p>
-      <p class="rl">데이터</p><p class="c s">멤버십 앱 열람 기록</p><p class="c s">L.POINT 구매 기록</p><p class="c s">같은 구매 기록의 금액</p>
-      <p class="rl">연결 확인</p><p class="c s">열람한 사람 중 다시 산 비율</p><p class="c s">A − B 차이 = 이야기의 효과</p><p class="c s">A − B 차이 = 매출 기여</p>
+    <div class="sgrid">
+      <div class="card shelf">
+        <p class="make"><span><i>1</i>유튜브 본편에서 명장면 고르기</span><em>→</em><span><i>2</i>고화질 일러스트로 다시 그려 라벨로</span><em>→</em><span><i>3</i>QR은 그 장면 시점부터 재생</span></p>
+        <div class="bts2">
+          <figure class="bt2"><div class="bot"><i class="cap"></i><i class="neck"></i><div class="body"><div class="lb"><img src="images/labels/dohyun.jpg" alt="이도현 편 장면 라벨 시안"><span class="wm">새로</span><span class="ep"><b>이도현 편</b><img class="qr" src="images/qr/dohyun.svg" alt="이도현 편 유튜브 QR"></span></div></div></div><figcaption>2023.3 · <b>QR 0:43~</b></figcaption></figure>
+          <figure class="bt2"><div class="bot"><i class="cap"></i><i class="neck"></i><div class="body"><div class="lb"><img src="images/labels/dol.jpg" alt="돌잔치 장면 라벨 시안"><span class="wm">새로</span><span class="ep"><b>돌잔치</b><img class="qr" src="images/qr/dol.svg" alt="돌잔치 유튜브 QR"></span></div></div></div><figcaption>2023.10 · <b>QR 2:03~</b></figcaption></figure>
+          <figure class="bt2"><div class="bot"><i class="cap"></i><i class="neck"></i><div class="body"><div class="lb"><img src="images/labels/gumi.jpg" alt="새로구미뎐 1화 장면 라벨 시안"><span class="wm">새로</span><span class="ep"><b>새로구미뎐 1화</b><img class="qr" src="images/qr/gumi.svg" alt="새로구미뎐 1화 유튜브 QR"></span></div></div></div><figcaption>2024.9 · <b>QR 0:53~</b></figcaption></figure>
+          <figure class="bt2 pick"><div class="bot"><i class="cap"></i><i class="neck"></i><div class="body"><div class="lb"><img src="images/labels/seventh.jpg" alt="7번째 이야기 장면 라벨 시안"><span class="wm">새로</span><span class="ep"><b>7번째 이야기</b><img class="qr" src="images/qr/seventh.svg" alt="7번째 이야기 유튜브 QR"></span></div></div></div><figcaption>2025.11 · <b>QR 5:03~</b></figcaption></figure>
+          <figure class="bt2"><div class="bot"><i class="cap"></i><i class="neck"></i><div class="body"><div class="lb"><img src="images/labels/s9.jpg" alt="시즌9 장면 라벨 시안"><span class="wm">새로</span><span class="ep"><b>시즌9</b><img class="qr" src="images/qr/s9.svg" alt="시즌9 유튜브 QR"></span></div></div></div><figcaption>2026.9 · <b>QR 0:58~</b></figcaption></figure>
+        </div>
+        <p class="q1">라벨 한 줄 예: <b>“꼬리는 왜 여섯 개일까?”</b> + QR → 5:03 장면부터 재생, 답은 영상 속에 · 처음처럼도 라벨에 QR(2024)</p>
+      </div>
+      <div class="card how2">
+        <p class="sh2">병 하나로 이어지는 흐름</p>
+        <ol>
+          <li><i>1</i><div><b>본다</b><span>냉장고 앞·술자리에서 지난번과 다른 장면</span></div></li>
+          <li class="scan"><i>2</i><div><b>찾아본다</b><span>라벨 QR → 유튜브 그 장면부터 재생 · 오른쪽 QR을 찍어 보세요</span></div><img class="qrbig" src="images/qr/seventh.svg" alt="7번째 이야기 유튜브 QR"></li>
+          <li><i>3</i><div><b>찍고, 간직한다</b><span>일러스트 라벨이라 병 자체가 소장품 · 인증샷 → 친구가 처음 보게 되는 계기</span></div></li>
+          <li class="main"><i>4</i><div><b>다음 화 라벨을 다시 산다</b><span>새 장면이 다시 살 계기 · 고정 고객이 되는지는 ②에서 확인</span></div></li>
+        </ol>
+      </div>
     </div>
-    <div class="use3">
-      <div class="card"><p class="w">KPI 활용 · 캠페인 전</p><b>목표와 기준선을 정한다</b><span>핵심 KPI는 하나 · B 집단이 기준선 · 성공 기준을 미리 (예: 재구매율 차이 2%p 이상)</span></div>
-      <div class="card"><p class="w">KPI 활용 · 캠페인 중</p><b>빨리 보이는 숫자로 고친다</b><span>열람률은 보낼 때마다 본다 · 낮으면 보내는 때와 제목을 고친다 (재구매는 90일 뒤 판정)</span></div>
-      <div class="card"><p class="w">KPI 활용 · 캠페인 후</p><b>다음 예산을 정한다</b><span>기준을 넘으면 대상을 넓히고, 못 넘으면 이야기를 고쳐 다시 잰다</span></div>
+    <div class="why3">
+      <div class="card"><b>약 0.03%</b><span>구독은 조회수의 0.03%뿐(11번) → 산 사람은 <em>병으로 매번</em> 다시 만난다</span></div>
+      <div class="card"><b>이미 2번</b><span>아홉 꼬리(2025.11)·리뉴얼 라벨(2026.2 침착맨 편)로 라벨과 광고를 연결 → <em>가끔이 아니라 연재로</em></span></div>
+      <div class="card"><b>4만 명+</b><span>새로도원 방문 · 팝업에선 ‘나만의 라벨’ 만들기까지 → 라벨은 이미 <em>팬 아이템</em></span></div>
     </div>
-    <p class="take card">보고 싶은 연결에 KPI를 미리 걸어 두면, 캠페인이 끝난 뒤 ‘관심이 고정 고객과 매출로 이어졌는가’에 답할 수 있다</p>
-    <p class="src">경품·포인트는 주지 않음(판매촉진 금품 금지) · 멤버십 밖 구매는 안 보임(두 집단에 똑같이 적용) · 12번의 답: 산 사람에게 직접 보내고, 조회수 대신 재구매로 평가</p>
+    <p class="src">출처: 맛별 라벨(국내 판매·공개 자료 기준) 롯데칠성음료 보도자료 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1363" target="_blank">1363</a>(살구) · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1476" target="_blank">1476</a>(다래) · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1632" target="_blank">1632</a>(오미자) · 리뉴얼 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1593" target="_blank">1593</a> · 아홉 꼬리 에디션 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1579" target="_blank">1579</a>(2025.11.21) · 침착맨 편 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1597" target="_blank">1597</a> · 처음처럼 라벨 QR은 <a href="https://www.straightnews.co.kr/news/articleView.html?idxno=248043" target="_blank">스트레이트뉴스(2024.5)</a> · 4만 명·나만의 라벨 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1600" target="_blank">1600</a> · 구독 비율은 11번 직접 집계 · 라벨은 유튜브 본편 장면을 다시 그린 발표자 시안(실제 제품 아님), QR은 실제 영상의 그 시점으로 연결</p>
   </section>
 
-  <!-- 14 실행 예시 영상: 한 사람의 90일 (장면에 맞춰 오른쪽 단계가 켜짐, 누르면 그 장면으로) -->
-  <section id="process" data-bg="dark">
-    <p class="eyebrow">내가 한다면 · 실행 예시</p>
-    <h2>한 사람의 90일: 사고, 이야기를 받고, 다시 산다</h2>
-    <div class="proc">
-      <div class="proc-v"><img src="bg/process.jpg" alt="실행 예시 첫 장면: 편의점에서 새로를 사며 멤버십을 적립하는 회원"></div>
-      <ol class="proc-steps">
-        <li data-t="0" class="now"><span class="pn">①</span><div><b>산 사람만 고른다</b><span>편의점에서 새로를 사고 L.POINT 적립 → 최근 90일 구매 회원</span></div></li>
-        <li data-t="5.5"><span class="pn">②</span><div><b>A 집단만 ‘다음 이야기’</b><span>멤버십 앱으로 새로구미 새 에피소드 · KPI 이야기 열람률</span></div></li>
-        <li data-t="11"><span class="pn">③</span><div><b>다시 사는지 본다</b><span>90일 안에 또 샀나 · 핵심 KPI 재구매율 (A − B)</span></div></li>
-      </ol>
+  <!-- 14 내가 한다면 ② 성적표: 10번에서 볼 수 없던 연결(관심 → 재구매 → 고정 고객)을 편의점 테스트로 직접 잰다 -->
+  <section id="judge" data-bg="dark">
+    <p class="eyebrow">내가 한다면 ② 성적표</p>
+    <h2>이번엔 성공했는지, 무엇으로 판정할까?</h2>
+    <div class="card chain2">
+      <p class="q">10번에서 볼 수 없던 연결을, 이번엔 테스트로 직접 잰다</p>
+      <div class="lk2"><span class="st">빨리 보이는 숫자 · 이유 찾기용</span><h3>관심 · 찾아보기</h3>
+        <ul><li>라벨 QR 접속 수 (매장 그룹마다 다른 링크)</li><li>라벨 인증샷 수 (인스타 해시태그)</li><li class="ref">검색 추이·그 화 조회수는 전국 숫자라 참고만</li></ul></div>
+      <p class="arr">이어졌나?</p>
+      <div class="lk2 main"><span class="st">핵심 KPI</span><h3>재구매</h3>
+        <ul><li>1~4주에 처음 산 사람의 90일 재구매율</li><li>두 매장 그룹의 차이</li></ul></div>
+      <p class="arr">이어졌나?</p>
+      <div class="lk2"><span class="st">최종 목표</span><h3>고정 고객</h3>
+        <ul><li>새로 주력 고객 수</li><li>90일 동안 소주 2번 이상 + 그중 절반 이상 새로</li></ul></div>
     </div>
+    <div class="row2">
+      <div class="card test">
+        <p class="ph"><b>편의점 400곳 · 17주</b> · 장면 라벨 200 vs 기존 라벨 200</p>
+        <div class="tl"><p><em>1~4주 · 장면 A</em>처음 산 사람 모으기</p><p><em>9주 · 장면 B</em>다음 화 공개와 함께 교체</p><p class="end"><em>17주 (4주 + 90일)</em>재구매 최종 판정</p></div>
+        <p class="data">매장은 무작위로 나눔(같은 동네는 한 그룹) · 재구매·주력 고객은 편의점 멤버십 구매로 편의점이 계산하고 롯데는 그룹별 숫자만 받음 · 처음처럼 판매도 함께 봄</p>
+      </div>
+      <div class="card ghk">
+        <p class="go"><em>넓힌다</em><span>재구매 +2%p 이상(가정) → 새 화마다 라벨 교체, 전국으로</span></p>
+        <p class="hold"><em>한 번 더</em><span>재구매 0~2%p → 장면·질문 고쳐 한 번만 다시</span></p>
+        <p class="kill"><em>멈춘다</em><span>재구매 차이 없음 → 중단 (관심 숫자가 올라도)</span></p>
+      </div>
+    </div>
+    <div class="card guard2">
+      <p class="gh"><svg class="ic"><use href="#i-lock"/></svg>지키는 선</p>
+      <p class="gl"><span>무작위·희귀 라벨 없음</span><span>‘모으면 증정’·묶음 판매 없음</span><span>‘다 모아 보세요’ 광고 문구 없음</span><span>음주 장면·의사 설정 제외</span><span>청소년이 끌릴 그림체 제외 (외부 심의)</span><span>경고 문구·그림 자리 먼저</span><span>음주량 지표는 안 씀</span></p>
+    </div>
+    <p class="src">‘모으면 증정’은 국세청 주류 거래질서 고시(상표를 경품 수단으로 쓰는 것 금지)와 국민건강증진법 제8조의2(경품 표시 금지)에 걸림 · 새로구미 탄생 스토리 광고는 광고노래·음주 미화·작업 중 음주를 지적받고 스스로 고침(2023.1 보도) · ‘간 전문의’ 설정은 식약처가 부당광고로 봤다고 보도(2022.12, 최종 처분은 확인 안 됨) · 경고 문구 글자 확대 2026.11.9 시행 · 기준값은 가정</p>
   </section>
 
   <!-- 부록 출처·데이터 노트 -->
@@ -1090,35 +1177,6 @@ function go(n) {
   history.replaceState(null, '', '#' + (cur + 1));
 }
 
-/* 실행 예시 영상: 슬라이드에 들어오면 새로 붙여 재생, 나가면 치움. 장면에 맞춰 단계 카드 강조 */
-const proc = document.getElementById('process');
-const procSteps = [...proc.querySelectorAll('.proc-steps li')];
-function syncProcess() {
-  const box = proc.querySelector('.proc-v');
-  let v = box.querySelector('video');
-  if (!proc.classList.contains('on')) { v?.remove(); return; }
-  if (v || still) return;
-  v = document.createElement('video');
-  for (const a of ['muted', 'loop', 'playsinline', 'autoplay', 'disablepictureinpicture', 'disableremoteplayback']) v.setAttribute(a, '');
-  v.muted = true;
-  v.src = videoURL.process || 'bg/process.mp4';
-  v.addEventListener('playing', () => v.classList.add('playing'));
-  v.addEventListener('timeupdate', () => {
-    const t = v.currentTime;
-    procSteps.forEach((li, i) => li.classList.toggle('now', t >= +li.dataset.t && (i === procSteps.length - 1 || t < +procSteps[i + 1].dataset.t)));
-  });
-  v.addEventListener('error', () => v.remove());
-  box.append(v);
-  v.play().catch(() => {});
-}
-procSteps.forEach(li => li.addEventListener('click', e => {          // 단계를 누르면 그 장면으로 (슬라이드는 안 넘어감)
-  e.stopPropagation();
-  const v = proc.querySelector('.proc-v video');
-  if (v) { v.currentTime = +li.dataset.t + 0.05; v.play().catch(() => {}); }
-}));
-const goBase = go;
-go = n => { goBase(n); syncProcess(); };
-
 addEventListener('keydown', e => {
   if (loading) {                                    // 로딩 화면에서는 시작만
     if ([' ', 'Enter', 'ArrowRight', 'PageDown'].includes(e.key)) { e.preventDefault(); start(false); }
@@ -1195,7 +1253,7 @@ async function loadVideo(name, prog) {
 
 async function preload() {
   const imgs = [...new Set([...document.images].map(i => i.src).filter(Boolean))];
-  const vids = still ? [] : [...new Set([...bgs.filter(b => !('still' in b.dataset)).map(b => b.dataset.video || b.dataset.bg), 'process'])];
+  const vids = still ? [] : [...new Set([...bgs.filter(b => !('still' in b.dataset)).map(b => b.dataset.video || b.dataset.bg)])];
   const items = [
     ...imgs.map(src => ({ w: 1, f: 0, run: set => loadImg(src).then(() => set(1)) })),
     ...vids.map(name => ({ w: 6, f: 0, run: set => loadVideo(name, set) })),
