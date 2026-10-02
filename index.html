@@ -230,38 +230,26 @@ a.stat2{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:center;
 .stat2 span{font-size:16px;color:var(--pale)}
 .stat2 span u{color:var(--mint);text-decoration:underline}
 /* 8번 비교용 시안: 판매량은 같아도 남은·새로 온·떠난 고객은 구분되지 않는다 */
-#mix .mixgrid{display:grid;grid-template-columns:minmax(0,1fr) 640px;gap:20px;align-items:start}
+#mix .mixgrid{display:grid;grid-template-columns:minmax(0,1fr) 640px;gap:20px;align-items:stretch}
 #mix #ch-churn svg{width:100%;height:auto}
 #mix .lt{display:flex;flex-direction:column;gap:14px}
-#mix .chartcard{padding:20px 26px}
+#mix .chartcard{padding:20px 26px;flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
 #mix .legend{display:flex;flex-wrap:wrap;gap:18px;font-size:16px;color:var(--pale);margin-top:2px}
 #mix .legend i{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:7px;vertical-align:-2px}
-#mix .ev3{display:flex;flex-direction:column;gap:12px}
-#mix .evk{padding:15px 22px}
-#mix .evk .h{font-size:23px;font-weight:800;display:flex;align-items:center;gap:10px;margin-bottom:6px}
-#mix .evk .h small{font-size:15px;font-weight:500;color:var(--pale)}
-#mix .sw{width:16px;height:16px;border-radius:5px;flex:none}
-#mix .sw.a{background:var(--ca)}#mix .sw.b{background:var(--cb)}#mix .sw.g{background:var(--cg);border:1px solid var(--pale)}
-#mix .evk li{font-size:17px;line-height:1.45;padding-left:14px;position:relative}
-#mix .evk li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--pale)}
-#mix .evk li a{font-size:14px;color:var(--pale);margin-left:4px}
-#mix .evk .q{font-size:16px;color:#FFC97A;margin-top:5px}
-/* 9 고정 고객을 잴 재료는 있지만 결과는 공개 안 됨: 안(볼 수 있는 숫자) | 자물쇠 | 밖(공개한 숫자) */
-#inside .wall{flex:1;min-height:0;display:grid;grid-template-columns:1fr 110px 1fr;align-items:stretch}
-#inside .side-c h3 small{font-size:17px;font-weight:500;color:var(--pale);margin-left:12px}
-#inside .side-c{padding:24px 30px;display:flex;flex-direction:column}
-#inside .side-c .row{flex:1;align-content:center}
-#inside .row{display:grid;grid-template-columns:50px 1fr;gap:16px;align-items:start;padding:17px 0;border-top:1px solid var(--line)}
-#inside .row>.ic{width:50px;height:50px;padding:12px;border-radius:12px;background:rgba(169,239,204,.14);color:var(--mint)}
-#inside .out .row>.ic{background:rgba(180,202,187,.12);color:var(--pale)}
-#inside .row .t{font-size:25px;font-weight:800}
-#inside .row .tg{font-size:15px;font-weight:700;margin-left:10px;padding:2px 10px;border-radius:999px;border:1px solid var(--line);color:var(--pale);vertical-align:3px;white-space:nowrap}
-#inside .row .d{font-size:18px;line-height:1.45;color:var(--pale);margin-top:2px}
-#inside .row .d a{color:var(--mint)}
-#inside .in{border-color:rgba(169,239,204,.45)}
-#inside .mid{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#FFC97A;font-size:17px;font-weight:700}
-#inside .mid::before,#inside .mid::after{content:"";flex:1;width:2px;background:linear-gradient(rgba(255,190,90,0),rgba(255,190,90,.45),rgba(255,190,90,0))}
-#inside .mid .ic{width:58px;height:58px;padding:14px;border-radius:50%;background:rgba(255,190,90,.14);border:1px solid rgba(255,190,90,.45);stroke-width:2}
+/* 10번 오른쪽: 공개한 숫자 / 회사 안에만 있는 숫자 (옛 11번 요약) */
+#mix .pubgap{display:flex;flex-direction:column;gap:10px;padding:20px 24px}
+#mix .pgh{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:800;color:var(--mint)}
+#mix .pgh.in{color:#FFC97A}
+#mix .pgh .ic{width:26px;height:26px}
+#mix .pgl{display:flex;flex-direction:column;gap:8px}
+#mix .pgl li{display:flex;flex-direction:column;padding:10px 14px;border-radius:12px;background:rgba(169,239,204,.08);border:1px solid var(--line)}
+#mix .pgl.in li{background:rgba(255,190,90,.07);border-color:rgba(255,190,90,.3)}
+#mix .pgl b{font-size:20px;font-weight:800;color:var(--paper)!important}
+#mix .pgl span{font-size:15px;color:var(--pale);margin-top:2px}
+#mix .pglock{display:flex;align-items:center;justify-content:center;gap:10px;font-size:16px;font-weight:700;color:#FFC97A;padding:2px 0}
+#mix .pglock::before,#mix .pglock::after{content:"";flex:1;height:1px;background:rgba(255,190,90,.4)}
+#mix .pglock .ic{width:20px;height:20px}
+#mix .pgc{font-size:19px;font-weight:800;line-height:1.4;padding:12px 16px;border-radius:12px;border:1.5px solid var(--mint);background:rgba(6,34,27,.9);margin-top:2px}
 .verdict2{padding:18px 22px;border-radius:18px;border:1.5px solid var(--mint);background:rgba(6,34,27,.94);backdrop-filter:blur(6px)}
 .verdict2 .v{display:flex;align-items:center;gap:10px;font-size:28px;font-weight:800}
 .verdict2 .v .ic{width:36px;height:36px;stroke-width:2.2;color:var(--mint)}
@@ -369,6 +357,53 @@ svg a text{fill:var(--t1);text-decoration:underline}
 #toc .pg{font-size:20px;font-weight:700;color:var(--pale);padding:4px 14px;border-radius:999px;border:1px solid var(--line)}
 #toc .toc-ap a{display:inline-flex;align-items:center;gap:14px;font-size:20px;color:var(--pale);text-decoration:none}
 #toc .toc-ap a:hover{color:var(--mint)}
+/* 정리: 질문 6개 3×2 + 맨 아래 한 줄. 판정 색: 성공 민트 · 한계 주황 · 끊김 빨강 · 비공개 회색 */
+#summary .sumgrid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:18px}
+#summary .sq{--tone:var(--pale);display:flex;flex-direction:column;gap:12px;padding:22px 26px;background:rgba(4,26,20,.93);border:1px solid var(--line);border-top:4px solid var(--tone)}
+#summary .t-warn{--tone:#FFC97A}
+#summary .t-bad{--tone:#FF8E7A}
+#summary .t-lock{--tone:#9DB3A8}
+#summary .t-win{--tone:#04261A;background:var(--mint)!important;border-color:var(--mint);color:#04261A}
+#summary .sh{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:700;color:var(--pale)}
+#summary .t-win .sh{color:#21483A}
+#summary .tag{display:inline-flex;align-items:center;gap:6px;flex:none;font-size:17px;font-weight:800;padding:4px 12px;border-radius:999px;color:#04261A;background:var(--tone)}
+#summary .t-win .tag{background:#04261A;color:var(--mint)}
+#summary .tag .ic{width:18px;height:18px;stroke-width:2.6}
+#summary .a{font-size:24px;font-weight:800;line-height:1.3;color:var(--paper)}
+#summary .t-win .a{color:#04261A}
+#summary .e{margin-top:auto;font-size:16px;color:var(--pale)}
+#summary .t-win .e{color:#21483A}
+#summary .viz{min-height:96px;display:flex;align-items:center}
+#summary .viz small{font-size:14px;color:var(--pale)}
+#summary .viz.two{gap:28px}
+#summary .viz.two p{display:flex;flex-direction:column}
+#summary .viz.two b{font-size:44px;font-weight:900;line-height:1.05;color:#04261A!important}
+#summary .viz.two span{font-size:16px;color:#21483A}
+#summary .viz.big{flex-direction:column;align-items:flex-start;justify-content:center;gap:4px}
+#summary .viz.big b{font-size:48px;font-weight:900;line-height:1.05;color:var(--tone)!important}
+#summary .viz.big span{font-size:16px;color:var(--pale)}
+#summary .viz.bars{flex-direction:column;align-items:stretch;justify-content:center;gap:8px}
+#summary .viz.bars p{display:grid;grid-template-columns:118px 1fr 84px;align-items:center;gap:10px;font-size:16px;color:var(--pale)}
+#summary .viz.bars i{display:block;height:18px;min-width:3px;border-radius:0 5px 5px 0;background:var(--tone)}
+#summary .viz.bars p+p i{background:#FF8E7A}
+#summary .viz.bars b{font-size:19px;font-weight:800;color:var(--paper)!important}
+#summary .viz.kpi{flex-wrap:wrap;align-content:center;gap:7px}
+#summary .viz.kpi span{font-size:15px;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--pale)}
+#summary .viz.kpi .ok{background:var(--mint);border-color:var(--mint);color:#04261A}
+#summary .viz.kpi .mid{border-color:#FFC97A;color:#FFC97A}
+#summary .viz.kpi .no{border-color:rgba(255,142,122,.6);color:#FF8E7A;text-decoration:line-through}
+#summary .viz.kpi small{flex-basis:100%}
+#summary .viz.cols{align-items:flex-end;gap:18px;height:110px}
+#summary .viz.cols p{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;width:62px;height:100%}
+#summary .viz.cols i{display:block;width:44px;border-radius:6px 6px 0 0;background:var(--tone);opacity:.9}   /* 높이 = 판매 병수 비례 (2.9억 = 60px) */
+#summary .viz.cols b{font-size:16px;font-weight:800;color:var(--paper)!important}
+#summary .viz.cols span{font-size:14px;color:var(--pale)}
+#summary .viz.cols small{align-self:center;margin-left:6px}
+#summary .viz.src3{flex-wrap:wrap;align-content:center;gap:8px}
+#summary .viz.src3 span{font-size:17px;font-weight:700;padding:6px 14px;border-radius:10px;background:rgba(157,179,168,.16);color:var(--pale)}
+#summary .viz.src3 .own{background:transparent;border:1.5px dashed var(--mint);color:var(--mint)}
+#summary .viz.src3 small{flex-basis:100%}
+#summary .sumline{font-size:32px;font-weight:800;text-align:center;padding:20px 28px;background:rgba(6,34,27,.95)!important;border:1.5px solid var(--mint)!important}
 /* 실행 예시 영상 */
 .proc{display:grid;grid-template-columns:1120px 1fr;gap:26px;align-items:center;flex:1;min-height:0}
 .proc-v{position:relative;aspect-ratio:16/9;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#000}
@@ -404,18 +439,6 @@ svg a text{fill:var(--t1);text-decoration:underline}
 /* 부록: 출처·데이터 노트 */
 .bg[data-bg=paper]{background:#F2ECE2}
 .appendix{gap:12px}
-/* 부록 2: 출품자료 원문 캡처 */
-#evid .evg{display:grid;grid-template-columns:auto auto 1fr;gap:20px;align-items:stretch}
-#evid figure{margin:0;padding:18px 22px;display:flex;flex-direction:column;gap:10px}
-#evid figcaption{font-size:20px;font-weight:800;color:var(--accent);display:flex;gap:10px;align-items:center}
-#evid figcaption span{font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.08em}
-#evid figcaption .x{color:#fff;background:var(--red);padding:2px 10px;border-radius:999px;letter-spacing:0}
-#evid img{display:block;align-self:flex-start;max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
-#evid .note p{color:var(--ink)}
-#evid .wide{grid-column:1/-1}
-#evid .note{display:flex;flex-direction:column;justify-content:center;gap:14px;padding:24px 30px}
-#evid .note p{font-size:24px;line-height:1.45}
-#evid .note .s{font-size:17px;color:var(--muted)}
 .appendix .ap-eye{color:#C4532F;letter-spacing:.2em;font-size:17px}
 .appendix h2{font-size:56px;font-weight:900}
 .ap-rule{display:block;width:72px;height:2px;background:var(--ink);margin:4px 0 16px}
@@ -483,14 +506,14 @@ svg a text{fill:var(--t1);text-decoration:underline}
     <p class="eyebrow">목차</p>
     <h2>오늘 이야기할 순서</h2>
     <ol class="toc">
-      <li><a href="#3" onclick="go(2);return false"><span class="num">01</span><span class="tt"><b>왜 여우였나</b><small>디자인과 반응 · 회사가 밝힌 목적과 KPI</small></span><span class="pg">3–4</span></a></li>
-      <li><a href="#5" onclick="go(4);return false"><span class="num">02</span><span class="tt"><b>무엇을 했나</b><small>타 업체와 비교 · 4년 캠페인과 수상</small></span><span class="pg">5–6</span></a></li>
+      <li><a href="#3" onclick="go(2);return false"><span class="num">01</span><span class="tt"><b>새로의 캐릭터 마케팅</b><small>디자인과 반응 · 회사가 밝힌 목적과 KPI</small></span><span class="pg">3–4</span></a></li>
+      <li><a href="#5" onclick="go(4);return false"><span class="num">02</span><span class="tt"><b>이야기로 이어 온 4년</b><small>타 업체와 비교 · 4년 캠페인과 수상</small></span><span class="pg">5–6</span></a></li>
       <li><a href="#7" onclick="go(6);return false"><span class="num">03</span><span class="tt"><b>공개된 성과</b><small>알리고 관심 끌기 · 캐릭터와 친해지기</small></span><span class="pg">7–8</span></a></li>
-      <li><a href="#9" onclick="go(8);return false"><span class="num">04</span><span class="tt"><b>타겟팅과 인사이트</b><small>누구를 노렸고, 무엇을 보고 싶었나</small></span><span class="pg">9</span></a></li>
-      <li><a href="#10" onclick="go(9);return false"><span class="num">05</span><span class="tt"><b>보이지 않는 연결</b><small>판매량 속 고객 · 공개된 숫자와 공개되지 않은 숫자</small></span><span class="pg">10–11</span></a></li>
-      <li><a href="#12" onclick="go(11);return false"><span class="num">06</span><span class="tt"><b>비판과 내가 한다면</b><small>조회수의 한계 · 단계마다 KPI로 재기</small></span><span class="pg">12–14</span></a></li>
+      <li><a href="#9" onclick="go(8);return false"><span class="num">04</span><span class="tt"><b>보이지 않는 연결</b><small>판매량 속 고객 · 공개된 숫자와 공개되지 않은 숫자</small></span><span class="pg">9</span></a></li>
+      <li><a href="#10" onclick="go(9);return false"><span class="num">05</span><span class="tt"><b>타겟팅과 인사이트</b><small>누구를 노렸고, 무엇을 보고 싶었나</small></span><span class="pg">10</span></a></li>
+      <li><a href="#11" onclick="go(10);return false"><span class="num">06</span><span class="tt"><b>비판과 내가 한다면</b><small>조회수의 한계 · 정리 · 단계마다 KPI로 재기</small></span><span class="pg">11–14</span></a></li>
     </ol>
-    <p class="toc-ap"><a href="#15" onclick="go(14);return false">부록 · 출처와 데이터 노트, 출품자료 원문<span class="pg">15–16</span></a></p>
+    <p class="toc-ap"><a href="#15" onclick="go(14);return false">부록 · 출처와 데이터 노트<span class="pg">15</span></a></p>
   </section>
 
   <!-- 3 디자인·반응: 오른쪽은 새로구미·남구미 배경, 왼쪽은 실제 광고 썸네일(누르면 원본 영상) -->
@@ -526,26 +549,26 @@ svg a text{fill:var(--t1);text-decoration:underline}
   <!-- 4 회사: 왼쪽 인터뷰한 사람, 오른쪽 핵심 정리 -->
   <section id="company" data-bg="dark">
     <p class="eyebrow">왜 여우였나 ② 회사가 밝힌 이유</p>
-    <h2>목표도 KPI도 적어 둔 캐릭터 마케팅</h2>
+    <h2>새로는 캐릭터로 무엇을 얻으려 했나</h2>
     <div class="co">
       <figure class="person"><img src="images/03_yoon_interview.jpg" alt="윤종혁 롯데칠성음료 주류마케팅부문장"><figcaption><b>윤종혁</b>롯데칠성음료 주류마케팅부문장(상무)<br><a href="https://bemyb.kr/contents/?bmode=view&idx=14184721" target="_blank">비마이비 인터뷰 · 2023.2.9</a> · 사진 비마이비</figcaption></figure>
       <div class="tiers">
         <div class="tier key"><p class="lv">목적<small>무엇을 원했나</small></p><div>
-          <p class="hd">처음엔 <b>재미있게 알리기</b>, 갈수록 <b>관계</b></p>
+          <p class="hd">처음엔 <b>재미있게 알리기</b></p>
           <div class="flow"><span class="chip"><em>2022</em>재미·친숙</span><span class="arrow">→</span><span class="chip"><em>2023</em>로열티</span><span class="arrow">→</span><span class="chip"><em>2024~</em>교감·친밀</span></div>
           <p class="ev">“다양한 속성을 보다 재미있게 전달하기 위해” <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1175" target="_blank">보도자료 1175 원문(2022.9.21)</a> · <a href="https://services.google.com/fh/files/events/ytw2024lotte_soju.pdf" target="_blank">2023 돌잔치 출품자료</a> · 보도자료 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1423" target="_blank">1423</a>·<a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1579" target="_blank">1579</a></p>
           <p class="interp"><span>발표자 해석</span>광고·신제품에 덜 기대도 꾸준히 팔리는 <b>고정 고객층</b> 만들기</p></div></div>
         <div class="tier"><p class="lv">방법<small>어떻게</small></p><div>
-          <p class="hd">톱스타 대신, <b>술자리에서 회자될 이야기</b></p>
+          <p class="hd">빅모델 대신, <b>술자리에서 회자될 이야기</b></p>
           <div class="cand"><span class="x">빅모델</span><span class="pick">구미호 ✓</span><span class="x">도깨비</span><span class="x">해태</span></div>
           <p class="ev">여러 모습으로 변하는 구미호 ≈ 희로애락의 술 · <a href="https://bemyb.kr/contents/?bmode=view&idx=14184721" target="_blank">윤종혁 인터뷰(비마이비 2023.2.9)</a></p></div></div>
         <div class="tier key"><p class="lv">기준<small>무엇으로 잴까</small></p><div>
-          <p class="hd">재는 기준도 적었다: 점유율 1/10 → <b>충성도</b> (목표 수치 없음)</p>
+          <p class="hd">점유율 1/10에서 <b>충성도</b>까지 KPI로 적었다 (수치 목표는 없음)</p>
           <div class="flow"><span class="chip"><em>2022</em>첫 목표: 경쟁 제품 점유율의 1/10</span><span class="arrow">→</span><span class="chip"><em>2023</em>KPI: 고려도·호감도·<em>충성도</em>·구매 의향·세일즈·점유율</span></div>
           <p class="ev">첫 목표는 같은 인터뷰 · KPI는 <a href="https://services.google.com/fh/files/events/ytw2024lotte_soju.pdf" target="_blank">2024 YouTube Works 출품자료</a>(2023 돌잔치, 회사·대행사 제출)</p></div></div>
       </div>
     </div>
-    <p class="concl2 card">회사·대행사가 출품자료에 <b>충성도</b>를 KPI로 적었다 → 그 결과는 공개됐을까?<small>발표자 해석 · 7~11번에서 확인</small></p>
+    <p class="concl2 card">회사·대행사가 출품자료에 <b>충성도</b>를 KPI로 적었다 → 그 결과는 공개됐을까?<small>발표자 해석 · 7~10번에서 확인</small></p>
     <p class="src">출처: <a href="https://bemyb.kr/contents/?bmode=view&idx=14184721" target="_blank">비마이비 윤종혁 인터뷰(2023.2.9)</a> · 롯데칠성음료 보도자료 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1175" target="_blank">1175</a> · 로열티는 <a href="https://services.google.com/fh/files/events/ytw2024lotte_soju.pdf" target="_blank">2024 YouTube Works 출품자료</a>(2023 돌잔치) · 교감·친밀은 보도자료 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1423" target="_blank">1423</a> · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1579" target="_blank">1579</a></p>
   </section>
 
@@ -610,7 +633,7 @@ svg a text{fill:var(--t1);text-decoration:underline}
 
   <!-- 7 성과① 알리고 관심 끌기 -->
   <section data-bg="dark">
-    <div class="goals"><span class="on">① 알리고 관심 끌기</span><span>② 캐릭터와 친해지기</span><span>③ 로열티 · 대표 소주</span></div>
+    <div class="goals"><span class="on">① 알리고 관심 끌기</span><span>② 캐릭터와 친해지기</span></div>
     <h2>출시 7개월 만에 1억 병, 2025년 말 누적 8억 병</h2>
     <div class="focus">
       <div class="card chartcard"><p class="ct">새로(제품) 누적 판매 병수 · 보도자료가 밝힌 달성 시점</p><div id="ch-bottles"></div>
@@ -631,8 +654,8 @@ svg a text{fill:var(--t1);text-decoration:underline}
 
   <!-- 8 성과② 캐릭터와 친해지기: 왼쪽 온라인(본편 9편), 오른쪽 오프라인(새로도원 팝업) -->
   <section id="like" data-bg="dark">
-    <div class="goals"><span>① 알리고 관심 끌기</span><span class="on">② 캐릭터와 친해지기</span><span>③ 로열티 · 대표 소주</span></div>
-    <h2>가장 큰 호응은 새로 살구, 조회수 1위와는 다른 영상</h2>
+    <div class="goals"><span>① 알리고 관심 끌기</span><span class="on">② 캐릭터와 친해지기</span></div>
+    <h2>새로구미는 어떤 호응을 얻었나?</h2>
     <div class="g7">
       <div class="lt">
         <div class="card chartcard"><p class="ct">유튜브 · 1분 이상 광고 본편 9편 · 영상 이름을 누르면 원본으로 이동</p><div id="ch-ads"></div>
@@ -660,10 +683,41 @@ svg a text{fill:var(--t1);text-decoration:underline}
     </div>
   </section>
 
+  <!-- 10 성과③ 로열티 · 대표 소주: 판매량은 유지됐지만 남은·새로 온·떠난 고객을 구분할 수 없다 -->
+  <section id="mix" data-bg="dark">
+    <h2>판매량 유지, 성과라고 할 수 있을까?</h2>
+    <div class="mixgrid">
+      <div class="lt">
+        <div class="card chartcard">
+          <p class="ct">같은 판매량, 다른 속사정 · 작년 → 올해 고객의 흐름</p>
+          <div id="ch-churn"></div>
+          <p class="legend"><span><i style="background:var(--ca)"></i>남은 고객(고정 고객)</span><span><i style="background:var(--cb)"></i>새로 온 고객(신제품·갈아탄 사람)</span><span><i style="background:var(--cg)"></i>떠난 고객</span><span>막대 높이(판매량)만 공개 · 비율은 설명용 예시</span></p>
+        </div>
+      </div>
+      <div class="card pubgap">
+        <p class="pgh"><svg class="ic"><use href="#i-screen"/></svg>회사가 공개한 숫자</p>
+        <ul class="pgl">
+          <li><b>누적 판매 8억 병</b><span>2025년 말 · 줄어들 수 없는 숫자</span></li>
+          <li><b>조회 8,600만 회 · 에피 금상 3개</b><span>유튜브 광고 43편(2025.8까지)</span></li>
+          <li><b>과일맛 매출 “약 27%↑”</b><span>성장률만 · 기준 금액과 병 수는 없음</span></li>
+        </ul>
+        <p class="pglock"><svg class="ic"><use href="#i-lock"/></svg>여기서부터 공개 안 됨</p>
+        <p class="pgh in"><svg class="ic"><use href="#i-building"/></svg>회사 안에만 있는 숫자</p>
+        <ul class="pgl in">
+          <li><b>제품별 · 채널별 판매</b><span>집계는 하지만 금액은 밝히지 않음</span></li>
+          <li><b>새로 음용자 조사</b><span>했다고는 밝혔지만 결과는 비공개</span></li>
+          <li><b>새로 매출</b><span>2024년 2분기부터 IR에서 따로 표기 안 함</span></li>
+        </ul>
+        <p class="pgc">고정 고객을 잴 재료는 있지만, 결과는 공개되지 않았다</p>
+      </div>
+    </div>
+    <p class="src">출처: 롯데칠성음료 보도자료 1292·1550·1593·1654 · IR 실적 자료 · 사업보고서 2025(DART) · 엠브레인 구매딥데이터 서비스 소개 · 고객 흐름 비율은 설명용 예시</p>
+  </section>
+
   <!-- 9 타겟팅과 인사이트: 겨냥한 곳 + 보고 싶었던 연결(관심 → 고정 고객 → 매출)은 관심까지만 공개 -->
   <section class="light" data-bg="light" id="insight">
     <p class="eyebrow">타겟팅과 인사이트</p>
-    <h2>보이는 건 관심까지, 고정 고객과 매출은 밖에서 볼 수 없다</h2>
+    <h2>공개된 성적표가 말해 주지 않는 것</h2>
     <div class="aim3">
       <div class="card"><svg class="ic"><use href="#i-users"/></svg><div><p class="k">누구를</p><p class="v">20·30대 주 소비층<span class="vs">여성 선호 ↑ → 남성 캐릭터 목소리 이도현</span></p></div></div>
       <div class="card"><svg class="ic"><use href="#i-screen"/></svg><div><p class="k">어디서 · 수업의 네 축</p><p class="v">콘텐츠·소셜 축<span class="vs">유튜브 · 인스타 · 팝업</span></p></div></div>
@@ -680,73 +734,10 @@ svg a text{fill:var(--t1);text-decoration:underline}
       <div class="lk shut"><span class="st"><svg class="ic"><use href="#i-lock"/></svg>회사 안 · 비공개</span><h3>매출</h3>
         <ul><li>새로 매출액</li><li>2024년 2분기부터 IR에서 빠짐</li></ul></div>
     </div>
-    <p class="take card">관심까지는 확인된다 → 그다음 연결이 보이는지, 판매량과 공개된 숫자로 확인해 본다</p>
+    <p class="take card">공개된 성적표는 ‘알리고 관심 끌기’까지만 보여 준다 → 다시 샀는지, 매출로 이어졌는지는 회사만 안다</p>
     <p class="src">출처: 롯데칠성음료 보도자료 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1162" target="_blank">1162</a> · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1297" target="_blank">1297</a> · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1550" target="_blank">1550</a> · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1593" target="_blank">1593</a> · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1600" target="_blank">1600</a> · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1175" target="_blank">1175</a> · <a href="https://economist.co.kr/article/view/ecn202304130049" target="_blank">이코노미스트(2023.4.16)</a> · <a href="https://services.google.com/fh/files/events/ytw2024lotte_soju.pdf" target="_blank">2024 YouTube Works 출품자료</a> 2~3쪽 · IR 실적 자료 · 3주차 강의 퍼널과 코틀러 5A</p>
   </section>
 
-  <!-- 10 성과③ 로열티 · 대표 소주: 판매량은 유지됐지만 남은·새로 온·떠난 고객을 구분할 수 없다 -->
-  <section id="mix" data-bg="dark">
-    <h2>판매량이 비슷해도, 사는 사람은 바뀌었을 수 있다</h2>
-    <div class="mixgrid">
-      <div class="lt">
-        <div class="card chartcard">
-          <p class="ct">같은 판매량, 다른 속사정 · 작년 → 올해 고객의 흐름</p>
-          <div id="ch-churn"></div>
-          <p class="legend"><span><i style="background:var(--ca)"></i>남은 고객(고정 고객)</span><span><i style="background:var(--cb)"></i>새로 온 고객(신제품·갈아탄 사람)</span><span><i style="background:var(--cg)"></i>떠난 고객</span><span>막대 높이(판매량)만 공개 · 비율은 설명용 예시</span></p>
-        </div>
-        <div class="lock"><svg class="ic"><use href="#i-lock"/></svg><div><p class="t">세 고객을 가르는 데이터는 이미 있다</p><p class="d">영수증 패널의 ‘신규·지속·이탈자 분석’(<a href="https://www.embrain.com/kor/dataService/purchaseBigdata" target="_blank">엠브레인, 유료</a>) → 썼는지, 결과가 어떤지는 공개되지 않음</p></div></div>
-      </div>
-      <div class="ev3">
-        <div class="card evk"><p class="h"><i class="sw b"></i>새로 온 고객<small>신제품 효과</small></p>
-          <ul>
-            <li>새로 살구, 5개월 만에 1,000만 병 (2024)<a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1421" target="_blank">보도자료 1421</a></li>
-            <li>새로 오미자, 한 달여 만에 200만 병 (2026)<a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1654" target="_blank">1654</a></li>
-            <li>과일맛 새로 매출 약 27%↑, 회사 설명은 “라인업 확대” 덕<a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1654" target="_blank">1654</a></li>
-          </ul>
-          <p class="q">단, 다래를 낸 2025년 2분기 롯데 소주 매출은 3.6% 감소 (<a href="https://company.lottechilsung.co.kr/kor/invest/irreport/list.do" target="_blank" style="color:inherit">IR</a>)</p></div>
-        <div class="card evk"><p class="h"><i class="sw g"></i>옮겨 온 · 떠난 고객<small>갈아타기 · 이탈</small></p>
-          <ul>
-            <li>2023년 새로 매출 +1,076억 원, 롯데 소주 전체는 +620억 원 → 처음처럼 등 약 456억 원 감소 (계산값)<a href="https://company.lottechilsung.co.kr/kor/invest/irreport/list.do" target="_blank">IR</a></li>
-            <li>새로 첫해 편의점 병소주 12.2%, 하이트진로 72.7→65.7%<a href="https://www.sedaily.com/article/13770769" target="_blank">서울경제</a></li>
-            <li>2026년 새로·진로·참이슬 모두 15.7도 → 바꿔 마시기 쉬움<a href="https://www.newscj.com/news/articleView.html?idxno=3412446" target="_blank">천지일보</a></li>
-          </ul>
-          <p class="q">떠난 사람이 얼마인지는 어느 회사도 공개하지 않음</p></div>
-        <div class="card evk"><p class="h"><i class="sw a"></i>남은 고객<small>고정 고객</small></p>
-          <ul>
-            <li>소주 출고량이 3년 새 8% 줄어든 시장에서 판매량 유지<a href="https://www.busan.com/view/busan/view.php?code=2026082312381346162" target="_blank">국세청 통계</a></li>
-            <li>가정용 구매액 4위 1,403억 원, 상위 순위 그대로<a href="https://www.hotelrestaurant.co.kr/news/articleView.html?idxno=21981" target="_blank">엠브레인</a></li>
-            <li>‘가장 즐겨 마시는 소주’로 새로 10.7% (2024.12)<a href="https://kiwisurvey.kr/report/detail?id=108" target="_blank">키위서베이</a></li>
-            <li>비교: 참이슬 프레쉬를 고른 이유 ‘항상 마시던 소주라서’ 30.1%<a href="https://kiwisurvey.kr/report/detail?id=108" target="_blank">같은 조사</a></li>
-          </ul>
-          <p class="q">새로의 ‘항상 마시던’ 비율과 재구매율은 공개되지 않음</p></div>
-      </div>
-    </div>
-    <p class="src">출처: 롯데칠성음료 보도자료 1421·1593·1654 · IR 실적(2023.4Q, 2025.2Q) · 서울경제 2023.10.1 · 천지일보 2026.6.26 · 부산일보 2026.8.23(국세청 출고량 86.2만→79.3만㎘) · 호텔앤레스토랑 2026.7.2(엠브레인 가정용 구매, 2026.5 기준 1년) · 키위서베이 2024.12(2,540명) · 456억은 IR 소주·새로 매출로 계산</p>
-  </section>
-
-  <!-- 11 공개되지 않은 것: 고정 고객을 잴 재료는 회사가 갖고 있거나 살 수 있지만, 밖으로 낸 건 관심의 숫자 -->
-  <section id="inside" data-bg="dark">
-    <p class="eyebrow">공개된 숫자와 공개되지 않은 숫자</p>
-    <h2>고정 고객을 잴 재료는 있지만, 결과는 공개되지 않았다</h2>
-    <div class="wall">
-      <div class="card side-c in">
-        <h3><svg class="ic"><use href="#i-building"/></svg>수집 실패한 정보<small>회사 안에 있거나 유료라 구하지 못함</small></h3>
-        <div class="row"><svg class="ic"><use href="#i-tag"/></svg><div><p class="t">제품별 판매<span class="tg">집계 확인</span></p><p class="d">오리지널과 살구·다래·오미자를 나눠 집계 · 과일맛 매출 “약 27%↑”를 직접 발표 · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1654" target="_blank">보도자료 1654</a></p></div></div>
-        <div class="row"><svg class="ic"><use href="#i-store"/></svg><div><p class="t">채널별 판매<span class="tg">집계 확인 · 업계 인용</span></p><p class="d">가정용(마트·편의점)과 유흥용(식당·주점) · 롯데 소주 2025년 가정용 1,832억, 유흥용 1,678억 원 · <a href="https://www.hankyung.com/article/202607023004i" target="_blank">한국경제(업계 인용)</a></p></div></div>
-        <div class="row"><svg class="ic"><use href="#i-users"/></svg><div><p class="t">신규 · 지속 · 이탈 고객<span class="tg">살 수 있음 · 이용 여부 모름</span></p><p class="d">영수증 패널 2만 명으로 나눠 보는 분석 서비스가 이미 있다 · <a href="https://www.embrain.com/kor/dataService/purchaseBigdata" target="_blank">엠브레인(유료)</a></p></div></div>
-        <div class="row"><svg class="ic"><use href="#i-chat"/></svg><div><p class="t">새로 음용자 조사<span class="tg">실시 확인 · 결과 비공개</span></p><p class="d">2026년 리뉴얼 방향(맛·원료)을 정하려고 했다고 밝힘 · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1593" target="_blank">보도자료 1593</a></p></div></div>
-      </div>
-      <div class="mid"><svg class="ic"><use href="#i-lock"/></svg><span>공개 안 됨</span></div>
-      <div class="card side-c out">
-        <h3><svg class="ic"><use href="#i-screen"/></svg>수집한 정보<small>회사가 밖으로 공개한 숫자</small></h3>
-        <div class="row"><svg class="ic"><use href="#i-stairs"/></svg><div><p class="t">누적 판매 병수</p><p class="d">2025년 말 8억 병 · 줄어들 수 없는 숫자 · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1593" target="_blank">보도자료 1593</a></p></div></div>
-        <div class="row"><svg class="ic"><use href="#i-play"/></svg><div><p class="t">조회수 · 수상</p><p class="d">유튜브 43편 8,600만 회(2025.8까지) · 에피 금상 3개 · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1550" target="_blank">1550</a> · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1292" target="_blank">1292</a></p></div></div>
-        <div class="row"><svg class="ic"><use href="#i-bag"/></svg><div><p class="t">성장률 %만</p><p class="d">과일맛 매출 “약 27%↑” · 기준 금액·병 수는 없음 · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1654" target="_blank">1654</a></p></div></div>
-        <div class="row"><svg class="ic"><use href="#i-minus"/></svg><div><p class="t">새로 매출은 사라짐</p><p class="d">2024년 2분기부터 IR에 따로 표기 안 함 · 사업보고서도 ‘처음처럼, 새로 등’ 한 줄 · <a href="https://company.lottechilsung.co.kr/kor/invest/irreport/list.do" target="_blank">IR</a> · <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260311004566" target="_blank">DART</a></p></div></div>
-      </div>
-    </div>
-    <p class="src">출처: 롯데칠성음료 보도자료 1292·1550·1593·1654 · IR 실적 자료 · 사업보고서 2025(DART) · 한국경제 2026.7.8(업계 인용) · 엠브레인 구매딥데이터 서비스 소개</p>
-  </section>
 
   <!-- 12 비판 -->
   <section class="light" data-bg="light" id="critique">
@@ -764,6 +755,50 @@ svg a text{fill:var(--t1);text-decoration:underline}
       </div>
     </div>
     <p class="src">출처: 유튜브 직접 확인(2026.9.30~10.1, <a href="https://www.youtube.com/@lotteLiquorBG/videos" target="_blank">롯데칠성 주류</a> · <a href="https://www.instagram.com/saero9mi/" target="_blank">@saero9mi</a>) · 3주차 강의(삼성카드 사례)</p>
+  </section>
+
+  <!-- 12 정리: 질문 6개로 답하는 요약 -->
+  <section id="summary" data-bg="dark">
+    <p class="eyebrow">정리</p>
+    <h2>그래서, 새로구미는 성공했을까?</h2>
+    <div class="sumgrid">
+      <div class="card sq t-win">
+        <p class="sh"><span class="tag"><svg class="ic"><use href="#i-check"/></svg>성공</span>어디까지 효과를 봤나?</p>
+        <div class="viz two"><p><b>8,600만 회</b><span>유튜브 광고 조회</span></p><p><b>4만 명+</b><span>새로도원 방문</span></p></div>
+        <p class="a">알리고 관심 끄는 데는 확실히 성공했다</p>
+        <p class="e">인지도 · 구매고려도도 상승 (출품자료)</p>
+      </div>
+      <div class="card sq t-warn">
+        <p class="sh"><span class="tag"><svg class="ic"><use href="#i-half"/></svg>노출 지표</span>유튜브 숫자는 믿을 수 있을까?</p>
+        <div class="viz bars"><p><span>본편 새로 살구</span><i style="width:100%"></i><b>0.54%</b></p><p><span>15초 광고</span><i style="width:2%"></i><b>0.0017%</b></p><small>좋아요 ÷ 조회수</small></div>
+        <p class="a">많이 보여 준 숫자이지, 좋아한 숫자는 아니다</p>
+        <p class="e">광고 예산의 80%가 조회형 광고 (출품자료)</p>
+      </div>
+      <div class="card sq t-bad">
+        <p class="sh"><span class="tag"><svg class="ic"><use href="#i-x"/></svg>끊김</span>왜 구독·팔로우로 이어지지 않았나?</p>
+        <div class="viz big"><b>3,400분의 1</b><span>조회 1억 4천만 회 → 구독 4.14만 · 팔로워 2.2만</span></div>
+        <p class="a">광고로 본 사람을 다시 만날 통로가 없었다</p>
+      </div>
+      <div class="card sq t-lock">
+        <p class="sh"><span class="tag"><svg class="ic"><use href="#i-lock"/></svg>비공개</span>고정 고객은 왜 확인할 수 없었나?</p>
+        <div class="viz kpi"><span class="ok">고려도 ✓</span><span class="mid">호감도 △</span><span class="no">충성도 ✕</span><span class="no">구매 의향 ✕</span><span class="no">세일즈 ✕</span><span class="no">점유율 ✕</span><small>출품자료 KPI 6개 중 결과가 나온 것</small></div>
+        <p class="a">KPI로 적어 두었지만, 결과는 공개되지 않았다</p>
+        <p class="e">필요했던 것: 재구매율 · 남은·떠난 고객을 가르는 구매 기록</p>
+      </div>
+      <div class="card sq t-warn">
+        <p class="sh"><span class="tag"><svg class="ic"><use href="#i-q"/></svg>가를 수 없음</span>매출로는 이어졌을까?</p>
+        <div class="viz cols"><p><i style="height:46px"></i><b>2.2억</b><span>2023</span></p><p><i style="height:60px"></i><b>2.9억</b><span>2024</span></p><p><i style="height:50px"></i><b>2.4억</b><span>2025</span></p><small>연도별 판매 병수 · 추정</small></div>
+        <p class="a">판매량은 지켰지만, 캐릭터 덕분인지는 가를 수 없다</p>
+        <p class="e">신제품이 받친 몫 · 새로 매출은 2024년부터 비공개</p>
+      </div>
+      <div class="card sq t-lock">
+        <p class="sh"><span class="tag"><svg class="ic"><use href="#i-minus"/></svg>조사의 한계</span>이번 조사의 한계는?</p>
+        <div class="viz src3"><span>보도자료</span><span>출품자료</span><span>IR</span><span class="own">직접 집계</span><small>회사가 낸 자료 3 · 직접 확인한 자료 1</small></div>
+        <p class="a">공개된 성적표는 회사가 고른 숫자뿐이었다</p>
+        <p class="e">연도별 판매는 띄엄띄엄 발표된 누적치로 추정</p>
+      </div>
+    </div>
+    <p class="sumline card">목표가 고정 고객이라면, 성적표도 <b>고정 고객</b>으로 매겨야 한다</p>
   </section>
 
   <!-- 13 내가 한다면: 9번에서 볼 수 없던 연결(관심 → 고정 고객 → 매출)을 단계마다 KPI로 재고, 그 KPI를 캠페인 전·중·후에 쓴다 -->
@@ -857,19 +892,6 @@ svg a text{fill:var(--t1);text-decoration:underline}
     <p class="ap-foot">회사·대행사 보도자료의 인용은 회사 발언, 기자·매체 보도는 매체 해석으로 나눔. 에피·스파익스 수상은 회사·대행사 발표 기준. 점유율은 새로가 아닌 롯데칠성 소주 전체.</p>
   </section>
 
-  <!-- 부록 2: 출품자료 원문 캡처 (질의응답용). 형광펜은 발표자 표시 -->
-  <section class="light appendix" data-bg="paper" id="evid">
-    <p class="eyebrow ap-eye">APPENDIX 2</p>
-    <h2>출품자료 원문 · 목표 · KPI · 결과</h2>
-    <i class="ap-rule"></i>
-    <div class="evg">
-      <figure class="card"><figcaption>목표<span>CAMPAIGN GOALS</span></figcaption><img src="images/ev_goal.png" alt="출품자료 CAMPAIGN GOALS: 소비자의 브랜드 경험을 통한 브랜드 차별화, 브랜드 로열티 형성 및 강화"></figure>
-      <figure class="card"><figcaption>KPI<span>CAMPAIGN KPI</span></figcaption><img src="images/ev_kpi.png" alt="출품자료 CAMPAIGN KPI: 고려도, 호감도, 충성도, 구매 의향, 세일즈 증대, 시장 점유율"></figure>
-      <div class="card note"><p>목표는 <b>브랜드 로열티 형성·강화</b>, KPI 여섯 개 중 하나가 <b>충성도</b></p><p>결과에는 상기도·인지도·구매고려도·선호도만 있고, <b>충성도 결과는 없다</b></p><p class="s">2023 돌잔치 캠페인 한 편의 출품자료(회사·대행사 제출)이며, 4년 전체 캠페인의 공식 목표는 아님</p></div>
-      <figure class="card wide"><figcaption>결과<span class="x">충성도 결과 없음</span></figcaption><img src="images/ev_result.png" alt="출품자료 결과: 광고 상기도 +13%, 브랜드인지도 +2.65%, 구매고려도 +7.07%, 선호도 17.38% 상승"></figure>
-    </div>
-    <p class="ap-foot">출처: <a href="https://services.google.com/fh/files/events/ytw2024lotte_soju.pdf" target="_blank">2024 YouTube Works 출품자료</a> 2~3쪽(2023 돌잔치, 회사·대행사 제출) · 형광펜은 발표자 표시</p>
-  </section>
 
 
   <div id="foot"></div>
@@ -933,12 +955,16 @@ function pace(el) {
 // 8번 시안: 작년 → 올해 고객의 흐름. 막대 높이(판매량)는 두 그림이 같고 안쪽 흐름만 다르다.
 // 비율은 설명용 예시이며 실제 수치가 아니다 (재구매·이탈 데이터는 공개되지 않음).
 function churn(el) {
-  const W = 960, H = 400, top = 150, h = 200, bw = 50, rise = 88;
-  const panels = [{ x: 0, key: '예시 1', title: '고정 고객이 받친다', stay: .8 }, { x: 500, key: '예시 2', title: '새 맛 · 갈아탄 사람이 받친다', stay: .35 }];
+  const W = 960, H = 600, top = 240, h = 300, bw = 56, rise = 132;   // 10번 왼쪽 칸 높이를 채우도록 세로로 키움
+  const panels = [{ x: 0, key: '예시 1', title: '고정 고객이 받친다', stay: .8, c: 'var(--ca)' }, { x: 500, key: '예시 2', title: '새 맛 · 갈아탄 사람이 받친다', stay: .35, c: 'var(--cb)' }];
   let g = `<defs>
     <linearGradient id="cg-leave" x1="0" x2="1"><stop offset="0" stop-color="var(--cg)" stop-opacity=".95"/><stop offset="1" stop-color="var(--cg)" stop-opacity="0"/></linearGradient>
     <linearGradient id="cg-new" x1="0" x2="1"><stop offset="0" stop-color="var(--cb)" stop-opacity="0"/><stop offset="1" stop-color="var(--cb)" stop-opacity=".95"/></linearGradient></defs>`;
   for (const p of panels) {
+    // 예시마다 옅은 상자로 영역을 나누고, 머리글(예시 번호 표시 + 제목)을 상자 안에 둔다
+    g += `<rect x="${p.x + 4}" y="4" width="452" height="${H - 8}" rx="18" fill="rgba(169,239,204,.045)" stroke="var(--line)" stroke-width="1.5"/>`;
+    g += `<rect x="${p.x + 24}" y="22" width="84" height="36" rx="18" fill="${p.c}"/><text x="${p.x + 66}" y="47" text-anchor="middle" style="font-size:19px;font-weight:800;fill:#04261A">${p.key}</text>`;
+    g += `<text class="t1" x="${p.x + 122}" y="48" style="font-size:24px">${p.title}</text>`;
     const L = p.x + 30, R = p.x + 372, x1 = L + bw, x2 = R, t = h * (1 - p.stay), mid = (x1 + x2) / 2;
     const stay = Math.round(p.stay * 100), move = 100 - stay;
     // 남은 고객: 작년 아래쪽 → 올해 아래쪽
@@ -949,12 +975,11 @@ function churn(el) {
     g += `<path fill="url(#cg-new)" d="M${mid + 24},${top - rise}C${x2 - 70},${top - rise} ${x2 - 60},${top} ${x2},${top}V${top + t}C${x2 - 60},${top + t} ${x2 - 70},${top - rise + t} ${mid + 24},${top - rise + t}Z"><title>새로 온 고객 (예시 ${move})</title></path>`;
     // 막대: 공개되는 것은 이 높이(판매량)뿐
     for (const [x, lab] of [[L, '작년'], [R, '올해']])
-      g += `<rect x="${x}" y="${top}" width="${bw}" height="${h}" rx="6" fill="none" stroke="var(--t1)" stroke-width="2.5"/><text class="t1" x="${x + bw / 2}" y="${top + h + 34}" text-anchor="middle">${lab}</text>`;
-    g += `<text class="t1" x="${mid}" y="${top + t + (h - t) / 2 + 7}" text-anchor="middle">남은 ${stay}</text>`;
-    g += `<text x="${mid - 30}" y="${top - rise - 12}" text-anchor="end">떠난 ${move}</text><text x="${mid + 30}" y="${top - rise - 12}">새로 온 ${move}</text>`;
-    g += `<text class="t1" x="${p.x + 10}" y="26" style="font-size:22px">${p.key}. ${p.title}</text>`;
+      g += `<rect x="${x}" y="${top}" width="${bw}" height="${h}" rx="6" fill="none" stroke="var(--t1)" stroke-width="2.5"/><text class="t1" x="${x + bw / 2}" y="${top + h + 34}" text-anchor="middle" style="font-size:23px">${lab}</text>`;
+    g += `<text class="t1" x="${mid}" y="${top + t + (h - t) / 2 + 9}" text-anchor="middle" style="font-size:26px">남은 ${stay}</text>`;
+    g += `<text x="${mid - 30}" y="${top - rise - 14}" text-anchor="end" style="font-size:22px">떠난 ${move}</text><text x="${mid + 30}" y="${top - rise - 14}" style="font-size:22px">새로 온 ${move}</text>`;
   }
-  g += `<text class="t1" x="480" y="${top + h / 2 + 14}" text-anchor="middle" style="font-size:44px">=</text>`;
+  g += `<text class="t1" x="480" y="${top + h / 2 + 18}" text-anchor="middle" style="font-size:56px">=</text>`;
   el.innerHTML = svg(W, H, g).replace('<svg ', '<svg class="big" aria-label="같은 판매량이라도 남은 고객과 새로 온 고객의 비율은 다를 수 있다는 예시 그림" ');
 }
 
