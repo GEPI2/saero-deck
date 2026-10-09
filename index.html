@@ -328,7 +328,7 @@ svg a text{fill:var(--t1);text-decoration:underline}
 .big2 span{font-size:21px;color:var(--ink)}
 .big2.msg b{font-size:32px;line-height:1.3;text-wrap:balance}   /* 숫자 대신 문장일 때 */
 #ch-rate .d{font-size:21px;color:var(--muted)}
-/* 13 내가 한다면 ① 에피소드 라벨: 지금(맛마다 1장) → 제안(새 화마다 라벨 교체) · 병 진열 시안 · 흐름 4단계 · 근거 3 */
+/* 13 내가 한다면 · 에피소드 라벨: 지금(맛마다 1장) → 제안(새 화마다 라벨 교체) · 병 진열 시안 · 흐름 4단계 · 근거 3 */
 #story .now2{display:grid;grid-template-columns:1fr 50px 1fr;align-items:stretch}
 #story .now2 p{display:flex;flex-direction:column;justify-content:center;gap:0;padding:10px 22px;border-radius:16px;font-size:24px;font-weight:800;line-height:1.3}
 #story .now2 .k{font-size:15px;font-weight:800;letter-spacing:.06em;color:var(--muted)}
@@ -378,40 +378,6 @@ svg a text{fill:var(--t1);text-decoration:underline}
 #story .why3 b{font-size:34px;font-weight:900;line-height:1.1;white-space:nowrap}
 #story .why3 span{font-size:19px;color:var(--muted);line-height:1.4}
 #story .why3 em{font-style:normal;font-weight:800;color:var(--ink)}
-/* 14 내가 한다면 ② 성적표: 10번에서 못 본 연결(관심 → 재구매 → 고정 고객)을 테스트로 직접 잰다 · 일정과 판정 · 지키는 선 */
-#judge .card{background:rgba(4,26,20,.93)}   /* 오른쪽 아래 배경 스카프가 비치지 않게 */
-#judge .chain2{display:grid;grid-template-columns:1fr 96px 1fr 96px 1fr;row-gap:14px;padding:22px 28px}
-#judge .chain2 .q{grid-column:1/-1;font-size:26px;font-weight:800}
-#judge .lk2{display:flex;flex-direction:column;gap:10px;padding:18px 22px;border-radius:16px;background:rgba(169,239,204,.08);border:1px solid var(--line)}
-#judge .lk2 .st{width:fit-content;font-size:16px;font-weight:800;padding:3px 12px;border-radius:999px;border:1px solid var(--mint);color:var(--mint)}
-#judge .lk2 h3{font-size:36px;font-weight:900;margin:0}
-#judge .lk2 ul{display:flex;flex-direction:column;gap:4px}
-#judge .lk2 li{font-size:22px;line-height:1.4;color:var(--pale)}
-#judge .lk2.main{background:var(--mint);border-color:var(--mint);color:#04261A}
-#judge .lk2.main .st{background:#04261A;border-color:#04261A;color:var(--mint)}
-#judge .lk2.main li{color:#21483A}
-#judge .lk2 li.ref{font-size:18px;color:#8FA89B}
-#judge .chain2 .arr{display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:#FFC97A;text-align:center}
-#judge .chain2 .arr::before{content:"→";font-size:44px;line-height:1}
-#judge .row2{display:grid;grid-template-columns:1fr 620px;gap:16px}
-#judge .test{display:flex;flex-direction:column;gap:12px;padding:18px 24px}
-#judge .ph{font-size:21px;font-weight:700;color:var(--pale)}
-#judge .tl{display:flex;gap:6px}
-#judge .tl p{flex:1;display:flex;flex-direction:column;gap:2px;padding:12px 18px;border-radius:10px;background:var(--accent);font-size:21px;font-weight:700;line-height:1.3}
-#judge .tl em{font-style:normal;font-size:15px;font-weight:800;color:#CDEBDD}
-#judge .tl .end{background:rgba(169,239,204,.12)}
-#judge .tl .end em{color:var(--mint)}
-#judge .data{font-size:17px;color:var(--pale)}
-#judge .ghk{display:flex;flex-direction:column;justify-content:center;gap:12px;padding:18px 22px}
-#judge .ghk p{display:grid;grid-template-columns:96px 1fr;align-items:center;gap:12px;font-size:20px;line-height:1.35}
-#judge .ghk em{font-style:normal;font-size:18px;font-weight:900;text-align:center;padding:4px 0;border-radius:8px;color:#04261A}
-#judge .go em{background:var(--mint)}
-#judge .hold em{background:#FFC97A}
-#judge .kill em{background:#FF8E7A}
-#judge .guard2{display:flex;align-items:center;gap:18px;padding:14px 24px}
-#judge .gh{flex:none;display:flex;align-items:center;gap:8px;font-size:20px;font-weight:800;color:#FFB3A6}
-#judge .gl{display:flex;flex-wrap:wrap;gap:8px}
-#judge .gl span{font-size:18px;font-weight:700;padding:4px 12px;border-radius:999px;border:1px solid rgba(255,142,122,.55);color:#FFB3A6}
 /* 목차: 2열 3줄, 누르면 이동 */
 #toc .toc{list-style:none;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:20px}
 #toc .toc a{height:100%;display:grid;grid-template-columns:110px 1fr auto;align-items:center;gap:22px;padding:24px 34px;border-radius:20px;background:rgba(4,26,20,.92);border:1px solid var(--line);text-decoration:none;color:var(--paper);transition:border-color .2s,background .2s}
@@ -562,9 +528,9 @@ svg a text{fill:var(--t1);text-decoration:underline}
       <li><a href="#7" onclick="go(6);return false"><span class="num">03</span><span class="tt"><b>공개된 성과</b><small>알리고 관심 끌기 · 캐릭터와 친해지기</small></span><span class="pg">7–8</span></a></li>
       <li><a href="#9" onclick="go(8);return false"><span class="num">04</span><span class="tt"><b>보이지 않는 연결</b><small>판매량 속 고객 · 공개된 숫자와 공개되지 않은 숫자</small></span><span class="pg">9</span></a></li>
       <li><a href="#10" onclick="go(9);return false"><span class="num">05</span><span class="tt"><b>타겟팅과 인사이트</b><small>누구를 노렸고, 무엇을 보고 싶었나</small></span><span class="pg">10</span></a></li>
-      <li><a href="#11" onclick="go(10);return false"><span class="num">06</span><span class="tt"><b>비판과 내가 한다면</b><small>조회수의 한계 · 정리 · 에피소드 라벨</small></span><span class="pg">11–14</span></a></li>
+      <li><a href="#11" onclick="go(10);return false"><span class="num">06</span><span class="tt"><b>비판과 내가 한다면</b><small>조회수의 한계 · 정리 · 에피소드 라벨</small></span><span class="pg">11–13</span></a></li>
     </ol>
-    <p class="toc-ap"><a href="#15" onclick="go(14);return false">부록 · 출처와 데이터 노트<span class="pg">15</span></a></p>
+    <p class="toc-ap"><a href="#14" onclick="go(13);return false">부록 · 출처와 데이터 노트<span class="pg">14</span></a></p>
   </section>
 
   <!-- 3 디자인·반응: 오른쪽은 새로구미·남구미 배경, 왼쪽은 실제 광고 썸네일(누르면 원본 영상) -->
@@ -852,9 +818,9 @@ svg a text{fill:var(--t1);text-decoration:underline}
     <p class="sumline card">목표가 고정 고객이라면, 성적표도 <b>고정 고객</b>으로 매겨야 한다</p>
   </section>
 
-  <!-- 13 내가 한다면 ① 에피소드 라벨: 맛마다 1장으로 고정된 라벨을, 애니메이션 새 화가 나올 때마다 그 화의 장면으로 바꾼다 (보상·무작위 없음) -->
+  <!-- 13 내가 한다면 · 에피소드 라벨: 맛마다 1장으로 고정된 라벨을, 애니메이션 새 화가 나올 때마다 그 화의 장면으로 바꾼다 (보상·무작위 없음) -->
   <section class="light" data-bg="light" id="story">
-    <p class="eyebrow">내가 한다면 ① 에피소드 라벨</p>
+    <p class="eyebrow">내가 한다면 · 에피소드 라벨</p>
     <h2>새로구미 이야기를, 병에 연재한다면?</h2>
     <div class="now2">
       <p class="was"><span class="k">지금</span><span>맛마다 라벨 <b>1장</b>, 바뀌는 건 리뉴얼 때뿐</span><small>국내 판매 기준 오리지널·살구·다래·오미자 · 예외는 2025.11 아홉 꼬리 한정판</small></p>
@@ -879,7 +845,7 @@ svg a text{fill:var(--t1);text-decoration:underline}
           <li><i>1</i><div><b>본다</b><span>냉장고 앞·술자리에서 지난번과 다른 장면</span></div></li>
           <li class="scan"><i>2</i><div><b>찾아본다</b><span>라벨 QR → 유튜브 그 장면부터 재생 · 오른쪽 QR을 찍어 보세요</span></div><img class="qrbig" src="images/qr/seventh.svg" alt="7번째 이야기 유튜브 QR"></li>
           <li><i>3</i><div><b>찍고, 간직한다</b><span>일러스트 라벨이라 병 자체가 소장품 · 인증샷 → 친구가 처음 보게 되는 계기</span></div></li>
-          <li class="main"><i>4</i><div><b>다음 화 라벨을 다시 산다</b><span>새 장면이 다시 살 계기 · 고정 고객이 되는지는 ②에서 확인</span></div></li>
+          <li class="main"><i>4</i><div><b>다음 화 라벨을 다시 산다</b><span>새 장면이 다시 살 계기 · 고정 고객이 되는지는 재구매율로 확인</span></div></li>
         </ol>
       </div>
     </div>
@@ -889,40 +855,6 @@ svg a text{fill:var(--t1);text-decoration:underline}
       <div class="card"><b>4만 명+</b><span>새로도원 방문 · 팝업에선 ‘나만의 라벨’ 만들기까지 → 라벨은 이미 <em>팬 아이템</em></span></div>
     </div>
     <p class="src">출처: 맛별 라벨(국내 판매·공개 자료 기준) 롯데칠성음료 보도자료 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1363" target="_blank">1363</a>(살구) · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1476" target="_blank">1476</a>(다래) · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1632" target="_blank">1632</a>(오미자) · 리뉴얼 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1593" target="_blank">1593</a> · 아홉 꼬리 에디션 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1579" target="_blank">1579</a>(2025.11.21) · 침착맨 편 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1597" target="_blank">1597</a> · 처음처럼 라벨 QR은 <a href="https://www.straightnews.co.kr/news/articleView.html?idxno=248043" target="_blank">스트레이트뉴스(2024.5)</a> · 4만 명·나만의 라벨 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1600" target="_blank">1600</a> · 구독 비율은 11번 직접 집계 · 라벨은 유튜브 본편 장면을 다시 그린 발표자 시안(실제 제품 아님), QR은 실제 영상의 그 시점으로 연결</p>
-  </section>
-
-  <!-- 14 내가 한다면 ② 성적표: 10번에서 볼 수 없던 연결(관심 → 재구매 → 고정 고객)을 편의점 테스트로 직접 잰다 -->
-  <section id="judge" data-bg="dark">
-    <p class="eyebrow">내가 한다면 ② 성적표</p>
-    <h2>이번엔 성공했는지, 무엇으로 판정할까?</h2>
-    <div class="card chain2">
-      <p class="q">10번에서 볼 수 없던 연결을, 이번엔 테스트로 직접 잰다</p>
-      <div class="lk2"><span class="st">빨리 보이는 숫자 · 이유 찾기용</span><h3>관심 · 찾아보기</h3>
-        <ul><li>라벨 QR 접속 수 (매장 그룹마다 다른 링크)</li><li>라벨 인증샷 수 (인스타 해시태그)</li><li class="ref">검색 추이·그 화 조회수는 전국 숫자라 참고만</li></ul></div>
-      <p class="arr">이어졌나?</p>
-      <div class="lk2 main"><span class="st">핵심 KPI</span><h3>재구매</h3>
-        <ul><li>1~4주에 처음 산 사람의 90일 재구매율</li><li>두 매장 그룹의 차이</li></ul></div>
-      <p class="arr">이어졌나?</p>
-      <div class="lk2"><span class="st">최종 목표</span><h3>고정 고객</h3>
-        <ul><li>새로 주력 고객 수</li><li>90일 동안 소주 2번 이상 + 그중 절반 이상 새로</li></ul></div>
-    </div>
-    <div class="row2">
-      <div class="card test">
-        <p class="ph"><b>편의점 400곳 · 17주</b> · 장면 라벨 200 vs 기존 라벨 200</p>
-        <div class="tl"><p><em>1~4주 · 장면 A</em>처음 산 사람 모으기</p><p><em>9주 · 장면 B</em>다음 화 공개와 함께 교체</p><p class="end"><em>17주 (4주 + 90일)</em>재구매 최종 판정</p></div>
-        <p class="data">매장은 무작위로 나눔(같은 동네는 한 그룹) · 재구매·주력 고객은 편의점 멤버십 구매로 편의점이 계산하고 롯데는 그룹별 숫자만 받음 · 처음처럼 판매도 함께 봄</p>
-      </div>
-      <div class="card ghk">
-        <p class="go"><em>넓힌다</em><span>재구매 +2%p 이상(가정) → 새 화마다 라벨 교체, 전국으로</span></p>
-        <p class="hold"><em>한 번 더</em><span>재구매 0~2%p → 장면·질문 고쳐 한 번만 다시</span></p>
-        <p class="kill"><em>멈춘다</em><span>재구매 차이 없음 → 중단 (관심 숫자가 올라도)</span></p>
-      </div>
-    </div>
-    <div class="card guard2">
-      <p class="gh"><svg class="ic"><use href="#i-lock"/></svg>지키는 선</p>
-      <p class="gl"><span>무작위·희귀 라벨 없음</span><span>‘모으면 증정’·묶음 판매 없음</span><span>‘다 모아 보세요’ 광고 문구 없음</span><span>음주 장면·의사 설정 제외</span><span>청소년이 끌릴 그림체 제외 (외부 심의)</span><span>경고 문구·그림 자리 먼저</span><span>음주량 지표는 안 씀</span></p>
-    </div>
-    <p class="src">‘모으면 증정’은 국세청 주류 거래질서 고시(상표를 경품 수단으로 쓰는 것 금지)와 국민건강증진법 제8조의2(경품 표시 금지)에 걸림 · 새로구미 탄생 스토리 광고는 광고노래·음주 미화·작업 중 음주를 지적받고 스스로 고침(2023.1 보도) · ‘간 전문의’ 설정은 식약처가 부당광고로 봤다고 보도(2022.12, 최종 처분은 확인 안 됨) · 경고 문구 글자 확대 2026.11.9 시행 · 기준값은 가정</p>
   </section>
 
   <!-- 부록 출처·데이터 노트 -->
