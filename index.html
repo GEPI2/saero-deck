@@ -328,7 +328,7 @@ svg a text{fill:var(--t1);text-decoration:underline}
 .big2 span{font-size:21px;color:var(--ink)}
 .big2.msg b{font-size:32px;line-height:1.3;text-wrap:balance}   /* 숫자 대신 문장일 때 */
 #ch-rate .d{font-size:21px;color:var(--muted)}
-/* 13 내가 한다면 · 에피소드 라벨: 지금(맛마다 1장) → 제안(새 화마다 라벨 교체) · 병 진열 시안 · 흐름 4단계 · 근거 3 */
+/* 13 내가 한다면 · 에피소드 라벨: 지금(맛마다 1장) → 제안(새 화마다 라벨 교체) · 병 진열 시안 · 흐름 4단계 · 친근함 지표 3 */
 #story .now2{display:grid;grid-template-columns:1fr 50px 1fr;align-items:stretch}
 #story .now2 p{display:flex;flex-direction:column;justify-content:center;gap:0;padding:10px 22px;border-radius:16px;font-size:24px;font-weight:800;line-height:1.3}
 #story .now2 .k{font-size:15px;font-weight:800;letter-spacing:.06em;color:var(--muted)}
@@ -373,7 +373,8 @@ svg a text{fill:var(--t1);text-decoration:underline}
 #story .how2 li.main>i{background:#fff;color:var(--accent)}
 #story .how2 li.main b{color:#fff!important}
 #story .how2 li.main span{color:#D6F0E3}
-#story .why3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+#story .why3{display:grid;grid-template-columns:auto repeat(3,1fr);gap:18px;align-items:stretch}
+#story .why3 .mh{align-self:center;font-size:22px;font-weight:900;line-height:1.3;color:var(--accent)}
 #story .why3 .card{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:18px;padding:14px 24px}
 #story .why3 b{font-size:34px;font-weight:900;line-height:1.1;white-space:nowrap}
 #story .why3 span{font-size:19px;color:var(--muted);line-height:1.4}
@@ -825,7 +826,7 @@ svg a text{fill:var(--t1);text-decoration:underline}
     <div class="now2">
       <p class="was"><span class="k">지금</span><span>맛마다 라벨 <b>1장</b>, 바뀌는 건 리뉴얼 때뿐</span><small>국내 판매 기준 오리지널·살구·다래·오미자 · 예외는 2025.11 아홉 꼬리 한정판</small></p>
       <i class="ar">→</i>
-      <p class="will"><span class="k">제안</span><span>새 화의 <b>명장면을 일러스트 라벨로</b></span><small>QR을 찍으면 그 장면부터 재생 · 병이 사는 사람 모두에게 닿는 ‘연재 지면’</small></p>
+      <p class="will"><span class="k">제안</span><span>새 화의 <b>명장면을 일러스트 라벨로</b></span><small><b>소주가 아니라 새로구미를</b> 매번 만나게 · QR을 찍으면 그 장면부터 재생</small></p>
     </div>
     <div class="sgrid">
       <div class="card shelf">
@@ -845,16 +846,17 @@ svg a text{fill:var(--t1);text-decoration:underline}
           <li><i>1</i><div><b>본다</b><span>냉장고 앞·술자리에서 지난번과 다른 장면</span></div></li>
           <li class="scan"><i>2</i><div><b>찾아본다</b><span>라벨 QR → 유튜브 그 장면부터 재생 · 오른쪽 QR을 찍어 보세요</span></div><img class="qrbig" src="images/qr/seventh.svg" alt="7번째 이야기 유튜브 QR"></li>
           <li><i>3</i><div><b>찍고, 간직한다</b><span>일러스트 라벨이라 병 자체가 소장품 · 인증샷 → 친구가 처음 보게 되는 계기</span></div></li>
-          <li class="main"><i>4</i><div><b>다음 화 라벨을 다시 산다</b><span>새 장면이 다시 살 계기 · 고정 고객이 되는지는 재구매율로 확인</span></div></li>
+          <li class="main"><i>4</i><div><b>다음 화 라벨을 다시 산다</b><span>다음 화가 궁금해서 · 자주 만날수록 캐릭터가 남고 진짜로 친해진다</span></div></li>
         </ol>
       </div>
     </div>
     <div class="why3">
-      <div class="card"><b>약 0.03%</b><span>구독은 조회수의 0.03%뿐(11번) → 산 사람은 <em>병으로 매번</em> 다시 만난다</span></div>
-      <div class="card"><b>이미 2번</b><span>아홉 꼬리(2025.11)·리뉴얼 라벨(2026.2 침착맨 편)로 라벨과 광고를 연결 → <em>가끔이 아니라 연재로</em></span></div>
-      <div class="card"><b>4만 명+</b><span>새로도원 방문 · 팝업에선 ‘나만의 라벨’ 만들기까지 → 라벨은 이미 <em>팬 아이템</em></span></div>
+      <p class="mh">친근함을<br>숫자로 받는다</p>
+      <div class="card"><b>QR 접속 수</b><span>새로구미가 궁금해서 <em>찾아봤다</em> · 라벨 QR로 집계</span></div>
+      <div class="card"><b>라벨 인증샷</b><span>캐릭터를 <em>좋아한다</em> · 인스타 해시태그로 집계</span></div>
+      <div class="card"><b>재구매율</b><span>친근함이 <em>다시 사는 것</em>으로 · 편의점 포인트 적립 기록, 90일</span></div>
     </div>
-    <p class="src">출처: 맛별 라벨(국내 판매·공개 자료 기준) 롯데칠성음료 보도자료 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1363" target="_blank">1363</a>(살구) · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1476" target="_blank">1476</a>(다래) · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1632" target="_blank">1632</a>(오미자) · 리뉴얼 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1593" target="_blank">1593</a> · 아홉 꼬리 에디션 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1579" target="_blank">1579</a>(2025.11.21) · 침착맨 편 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1597" target="_blank">1597</a> · 처음처럼 라벨 QR은 <a href="https://www.straightnews.co.kr/news/articleView.html?idxno=248043" target="_blank">스트레이트뉴스(2024.5)</a> · 4만 명·나만의 라벨 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1600" target="_blank">1600</a> · 구독 비율은 11번 직접 집계 · 라벨은 유튜브 본편 장면을 다시 그린 발표자 시안(실제 제품 아님), QR은 실제 영상의 그 시점으로 연결</p>
+    <p class="src">출처: 맛별 라벨(국내 판매·공개 자료 기준) 롯데칠성음료 보도자료 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1363" target="_blank">1363</a>(살구) · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1476" target="_blank">1476</a>(다래) · <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1632" target="_blank">1632</a>(오미자) · 리뉴얼 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1593" target="_blank">1593</a> · 아홉 꼬리 에디션 <a href="https://company.lottechilsung.co.kr/kor/company/news/view.do?detailsKey=1579" target="_blank">1579</a>(2025.11.21) · 처음처럼 라벨 QR은 <a href="https://www.straightnews.co.kr/news/articleView.html?idxno=248043" target="_blank">스트레이트뉴스(2024.5)</a> · 지표는 발표자 제안(재구매율은 편의점이 계산하고 롯데는 매장 그룹별 숫자만 받음) · 라벨은 유튜브 본편 장면을 다시 그린 발표자 시안(실제 제품 아님), QR은 실제 영상의 그 시점으로 연결</p>
   </section>
 
   <!-- 부록 출처·데이터 노트 -->
